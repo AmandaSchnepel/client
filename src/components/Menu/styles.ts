@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-
 export const Wrapper = styled.menu`
   ${({ theme }) => css`
     display: flex;
@@ -22,12 +21,12 @@ export const IconWrapper = styled.div`
   `}
 `
 export const IconsGroupMenu = styled.div`
-display: flex;
-justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 `
 
 export const MenuGroup = styled.div`
-${media.lessThan('medium')`
+  ${media.lessThan('medium')`
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
@@ -46,38 +45,37 @@ ${media.lessThan('medium')`
 `
 
 export const LinksGroup = styled.div`
-display: flex;
-flex-grow: 1;
-justify-content: flex-start;
-align-items: flex-start;
-
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
 `
 
 export const GroupLogo = styled.div`
-${media.lessThan('medium')`
+  ${media.lessThan('medium')`
+size: normal;
 position: absolute;
 left:50%;
 transform: translateX(-50%);
 `}
 
-${media.greaterThan('medium')`
+  ${media.greaterThan('medium')`
 padding: 0 8rem 0 0;
 `}
 `
 
 export const GroupSpacings1 = styled.div`
-display: flex;
-margin: 0 5rem 0 5rem; 
+  display: flex;
+  margin: 0 5rem 0 5rem;
 `
 
 export const GroupSpacings2 = styled.div`
-display: flex;
-margin: 0 4rem 0 4rem; 
+  display: flex;
+  margin: 0 4rem 0 4rem;
 `
 
-
 export const IconMenuStyled = styled.div`
-${({ theme })=> css`
+  ${({ theme }) => css`
     cursor: pointer;
     width: 2rem;
     height: 2rem;
@@ -88,23 +86,22 @@ ${({ theme })=> css`
 
 type ImageProps = {
   src: string
-  }
-  
+}
+
 export const ImageMenu = styled.div<ImageProps>`
-${({ theme, src })=> css`
+  ${({ theme, src }) => css`
     width: 3rem;
     height: 3rem;
     margin: -0.25rem 1rem 0 0;
     border-radius: 5rem;
     background-color: ${theme.colors.lightGray1};
     background-image: url(${src});
-    background-position:center center ;
+    background-position: center center;
     background-size: cover;
- `}
+  `}
 `
 
 export const LinksMenu = styled.a`
-
   ${({ theme }) => css`
     color: ${theme.colors.black1};
     font-size: ${theme.sizes.icons};
@@ -113,12 +110,10 @@ export const LinksMenu = styled.a`
   `}
 `
 
-
-
 export const MenuNav = styled.div`
-display: flex;
-justify-content: center;
-padding: 0.5rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0 0 0;
 `
 
 export const MenuConfigGroup = styled.div`
@@ -138,10 +133,10 @@ export const MenuConfigGroup = styled.div`
 
 //informações do usuario
 export const GroupUserInfo = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `
 //links do menu
 export const MenuLink = styled.a`
@@ -173,7 +168,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? 'all' : 'none'};
 
-  > svg {
+    > svg {
       position: absolute;
       top: 0;
       right: 0;
@@ -182,13 +177,11 @@ export const MenuFull = styled.nav<MenuFullProps>`
       width: 2.4rem;
       height: 2.4rem;
     }
- `}
+  `}
 `
 
- 
-
 export const RegisterBox = styled.div`
-${({ theme }) => css`
+  ${({ theme }) => css`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -196,7 +189,7 @@ ${({ theme }) => css`
     justify-content: flex-end;
     padding: 0 0 6rem 0;
 
-    > span{
+    > span {
       display: block;
       margin: ${theme.spacings.xxsmall} 0;
       font-size: ${theme.sizes.xsmall};
@@ -205,9 +198,9 @@ ${({ theme }) => css`
 `
 
 export const CreateAccount = styled.a`
-${({theme })=> css`
+  ${({ theme }) => css`
     text-decoration: none;
     color: ${theme.colors.green};
-    border-bottom: 0.2rem solid ${theme.colors.green}
-`}
+    border-bottom: 0.2rem solid ${theme.colors.green};
+  `}
 `
