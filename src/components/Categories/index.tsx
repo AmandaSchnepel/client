@@ -5,9 +5,9 @@ export type CategoriesProps = {
   title: string
 }
 
-const Categorias = ({img, title}: CategoriesProps) => (
+const Categorias = ({ img, title }: CategoriesProps) => (
   <S.Wrapper>
-    <S.Image src={img} role="img" aria-label={title}/>
+    <S.Image src={img} role="img" aria-label={title} />
     <S.Title>{title}</S.Title>
   </S.Wrapper>
 )

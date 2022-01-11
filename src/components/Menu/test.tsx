@@ -4,7 +4,6 @@ import { renderWithTheme } from 'utils/tests/helpers'
 
 import Menu from '.'
 
-
 describe('<Menu />', () => {
   it('should render the menu', () => {
     renderWithTheme(<Menu items={[]} />)
@@ -42,7 +41,7 @@ describe('<Menu />', () => {
     expect(screen.getByText(/Cadastrar/i)).toBeInTheDocument()
   })
 
-    it('should show wishlight and accont when logged in', () => {
+  it('should show wishlight and accont when logged in', () => {
     renderWithTheme(<Menu items={[]} username="will" />)
 
     expect(screen.getByText(/Endereços/i)).toBeInTheDocument()
@@ -53,21 +52,24 @@ describe('<Menu />', () => {
     expect(screen.getByText(/Nossas Lojas/i)).toBeInTheDocument()
   })
 
-
   const props = {
-    img:'https://unsplash.com/photos/6unx_9DIbe4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
-    title:'name user',
-    link:'/user/logout'
-}
+    img: 'https://unsplash.com/photos/6unx_9DIbe4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
+    title: 'name user',
+    link: '/user/logout'
+  }
 
-describe('<MenuUserInfo />', () => {
-  it('should render correctly', () => {
-    renderWithTheme(<MenuUserInfo {...props} />)
-    //verificar se o title existe renderizado
-    expect(screen.getByRole('heading', {name: /name user/i})).toBeInTheDocument()
-    
-    //verifique se a imagem existe renderizado
-    expect(screen.getByRole('img', {name: /name user/i})).toBeInTheDocument()
+  describe('<MenuUserInfo />', () => {
+    it('should render correctly', () => {
+      renderWithTheme(<MenuUserInfo {...props} />)
+      //verificar se o title existe renderizado
+      expect(
+        screen.getByRole('heading', { name: /name user/i })
+      ).toBeInTheDocument()
+
+      //verifique se a imagem existe renderizado
+      expect(
+        screen.getByRole('img', { name: /name user/i })
+      ).toBeInTheDocument()
+    })
   })
-})
 })

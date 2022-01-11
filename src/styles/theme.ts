@@ -12,16 +12,16 @@ export default {
     light: 300,
     regular: 400,
     medium: 500,
-    bold: 700,
+    bold: 700
   },
-    sizes: {
-      xsmall: '1.2rem',
-      small: '1.4rem',
-      medium: '1.6rem',
-      icons: '1.5rem',
-      large: '1.8rem',
-      xlarge: '2.0rem',
-      xxlarge: '2.4rem'
+  sizes: {
+    xsmall: '1.2rem',
+    small: '1.4rem',
+    medium: '1.6rem',
+    icons: '1.5rem',
+    large: '1.8rem',
+    xlarge: '2.0rem',
+    xxlarge: '2.4rem'
   },
   colors: {
     green: '#207824',
@@ -32,7 +32,7 @@ export default {
     white2: '#FAFAFA',
     blackgray: '#434343',
     gray: '#31322D',
-    lightGray1: '#788897',
+    lightGray1: '#767676',
     lightGray2: '#EAEAEA',
     red: '#EF2F2F',
     lightred: '#ED8383'
