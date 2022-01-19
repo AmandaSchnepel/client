@@ -12,7 +12,7 @@ import { UserCircle as UserIcon } from '@styled-icons/boxicons-regular/UserCircl
 // icon flecha
 import { ArrowIosDownwardOutline as ArrowIcon } from '@styled-icons/evaicons-outline/ArrowIosDownwardOutline'
 // icon Lacalização
-import { PersonPinCircle as PinIcon } from '@styled-icons/material/PersonPinCircle'
+import { PinOutline as PinIcon } from '@styled-icons/evaicons-outline/PinOutline'
 // ICON FECHAR MENU
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 //ICON endereço
@@ -45,7 +45,7 @@ const Menu = ({ items, username }: MenuUserProps) => {
   return (
     <S.Wrapper>
       <S.MenuGroup>
-        <MediaMatch lessThan="medium">
+        <MediaMatch lessThan="large">
           <S.IconWrapper onClick={() => setIsOpen(true)}>
             <MenuIcon aria-label="Open Menu" />
           </S.IconWrapper>
@@ -53,10 +53,10 @@ const Menu = ({ items, username }: MenuUserProps) => {
 
         <S.LinksGroup>
           <S.GroupLogo>
-            <Logo />
+            <Logo size="large" />
           </S.GroupLogo>
 
-          <MediaMatch greaterThan="medium">
+          <MediaMatch greaterThan="large">
             <S.GroupSpacings1>
               <S.ImageMenu src="/img/supermercado.png" />
               <S.LinksMenu href="#">Mercado</S.LinksMenu>
@@ -66,11 +66,11 @@ const Menu = ({ items, username }: MenuUserProps) => {
             </S.GroupSpacings1>
           </MediaMatch>
 
-          <MediaMatch greaterThan="medium">
+          <MediaMatch greaterThan="large">
             <S.GroupSpacings2>
-              <S.IconMenuStyled>
+              <S.IconMenuSpacing>
                 <PinIcon ari-Label="Pin Location" />
-              </S.IconMenuStyled>
+              </S.IconMenuSpacing>
               <S.LinksMenu href="#">Rua pará 1179</S.LinksMenu>
               <S.IconMenuStyled>
                 <ArrowIcon ari-Label="open Location" />
@@ -79,7 +79,7 @@ const Menu = ({ items, username }: MenuUserProps) => {
           </MediaMatch>
         </S.LinksGroup>
         <S.IconsGroupMenu>
-          <MediaMatch greaterThan="medium">
+          <MediaMatch greaterThan="large">
             <S.IconWrapper>
               <SearchIcon aria-label="Open Search" />
             </S.IconWrapper>
@@ -89,13 +89,13 @@ const Menu = ({ items, username }: MenuUserProps) => {
             <FavoriteIcon aria-label="Open Favorites" />
           </S.IconWrapper>
 
-          <MediaMatch greaterThan="medium">
+          <MediaMatch greaterThan="large">
             <S.IconWrapper>
               <CartIcon aria-label="Open Cart" />
             </S.IconWrapper>
           </MediaMatch>
 
-          <MediaMatch greaterThan="medium">
+          <MediaMatch greaterThan="large">
             <S.IconWrapper>
               <UserIcon aria-label="Open User" />
             </S.IconWrapper>

@@ -32,6 +32,8 @@ export default {
     white2: '#FAFAFA',
     blackgray: '#434343',
     gray: '#31322D',
+    grayLine: '#D6D6D6',
+    grayBox: '#939393',
     lightGray1: '#767676',
     lightGray2: '#EAEAEA',
     red: '#EF2F2F',

@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.section`
   ${media.greaterThan('large')`
    .slick-slide > div {
-      margin: 0 1rem 0 1rem;
+      margin: 0 2rem 0 0;
       flex: 1 0 auto;
       height: 100%;
 }
@@ -29,10 +29,10 @@ export const Wrapper = styled.section`
     transform: translate(0, -50%);
   }
   .slick-prev {
-    left: -3rem;
+    left: -4rem;
   }
   .slick-next {
-    right: -3rem;
+    right: -4rem;
   }
   .slick-prev.slick-disabled,
   .slick-next.slick-disabled {

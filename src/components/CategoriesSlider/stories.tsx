@@ -1,69 +1,8 @@
 import { Story, Meta } from '@storybook/react'
 import { CategoriesProps } from 'components/Categories'
 import CategoriesSlider from '.'
+import items from './mock'
 
-const items = [
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140',
-    title: 'categoria'
-  }
-]
 export default {
   title: 'CategoriesSlider',
   component: CategoriesSlider,

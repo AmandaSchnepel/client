@@ -9,8 +9,8 @@ const wrapperModifiers = {
   `,
 
   large: () => css`
-    width: 20rem;
-    height: 5.9rem;
+    width: 13rem;
+    height: 5.3rem;
   `
 }
 

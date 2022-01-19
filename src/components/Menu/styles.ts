@@ -2,21 +2,20 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.menu`
-  ${({ theme }) => css`
-    display: flex;
-    padding: ${theme.spacings.small} 0;
-    position: relative;
-  `}
+  display: flex;
+  align-items: center;
+  padding: 3.2rem 0 1rem 0;
+  position: relative;
 `
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.black1};
     cursor: pointer;
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 2.8rem;
+    height: 2.8rem;
   `}
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('large')`
    margin: 0 0 0 1.5rem;
   `}
 `
@@ -52,14 +51,14 @@ export const LinksGroup = styled.div`
 `
 
 export const GroupLogo = styled.div`
-  ${media.lessThan('medium')`
+  ${media.lessThan('large')`
 size: normal;
 position: absolute;
 left:50%;
 transform: translateX(-50%);
 `}
 
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('large')`
 padding: 0 8rem 0 0;
 `}
 `
@@ -80,7 +79,16 @@ export const IconMenuStyled = styled.div`
     width: 2rem;
     height: 2rem;
     color: ${theme.colors.blackgray};
-    margin: -0.2rem 0.4rem 0 0.4rem;
+    margin: 0.1rem 0.5rem 0 0.5rem;
+  `}
+`
+export const IconMenuSpacing = styled.div`
+  ${({ theme }) => css`
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: ${theme.colors.blackgray};
+    margin: -0.08rem 0.5rem 0 0.5rem;
   `}
 `
 
@@ -90,9 +98,9 @@ type ImageProps = {
 
 export const ImageMenu = styled.div<ImageProps>`
   ${({ theme, src }) => css`
-    width: 3rem;
-    height: 3rem;
-    margin: -0.25rem 1rem 0 0;
+    width: 3.3rem;
+    height: 3.3rem;
+    margin: -0.3rem 1.2rem 0 0;
     border-radius: 5rem;
     background-color: ${theme.colors.lightGray1};
     background-image: url(${src});
@@ -104,7 +112,7 @@ export const ImageMenu = styled.div<ImageProps>`
 export const LinksMenu = styled.a`
   ${({ theme }) => css`
     color: ${theme.colors.black1};
-    font-size: ${theme.sizes.icons};
+    font-size: ${theme.sizes.large};
     font-weight: ${theme.font.medium};
     text-decoration: none;
   `}
@@ -156,6 +164,7 @@ type MenuFullProps = {
 export const MenuFull = styled.nav<MenuFullProps>`
   ${({ theme, isOpen }) => css`
     background: ${theme.colors.white1};
+    z-index: 1;
     position: absolute;
     flex-direction: column;
     top: 0;

@@ -33,7 +33,7 @@ describe('<Logo />', () => {
     expect(
       screen.getByLabelText(/Supermercado Jardim/i).parentElement
     ).toHaveStyle({
-      width: '20rem'
+      width: '13rem'
     })
   })
 })

@@ -11,7 +11,7 @@ type SliderCategoriesProps = {
 }
 
 const settings: SliderSettings = {
-  slidesToShow: 13,
+  slidesToShow: 13.3,
   infinite: false,
   lazyLoad: 'progressive',
   responsive: [

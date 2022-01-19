@@ -11,7 +11,7 @@ type SliderBannerProps = {
 }
 
 const settings: SliderSettings = {
-  slidesToShow: 3,
+  slidesToShow: 2.6,
   infinite: false,
   lazyLoad: 'progressive',
   responsive: [
@@ -75,7 +75,7 @@ const settings: SliderSettings = {
       breakpoint: 280,
       settings: {
         arrows: false,
-        slidesToShow: 2
+        slidesToShow: 1
       }
     }
   ],

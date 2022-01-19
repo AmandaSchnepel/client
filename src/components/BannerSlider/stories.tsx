@@ -1,24 +1,7 @@
 import { Story, Meta } from '@storybook/react'
 import { BannerProps } from 'components/Banner'
 import BannerSlider from '.'
-
-const items = [
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140'
-  },
-  {
-    img: 'https://source.unsplash.com/user/willianjusten/300x140'
-  }
-]
+import items from './mock'
 
 export default {
   title: 'BannerSlider',

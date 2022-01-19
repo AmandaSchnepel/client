@@ -6,10 +6,13 @@ import { HeadingProps } from '.'
 export const Wrapper = styled.h2<HeadingProps>`
   ${({ theme, color }) => css`
     color: ${theme.colors[color!]};
-    font-size: ${theme.sizes.large};
+    font-weight: ${theme.font.medium};
 
     ${media.greaterThan('medium')`
-        font-size: ${theme.sizes.xlarge};
+        font-size: ${theme.sizes.large};
+    `}
+    ${media.lessThan('medium')`
+        font-size: ${theme.sizes.medium};
     `}
   `}
 `

@@ -1,9 +1,4 @@
-import 'match-media-mock'
-import { renderWithTheme } from 'utils/tests/helpers'
-
-import ProductsSliderRegular from '.'
-
-const items = [
+export default [
   {
     title: 'Creme de leite original uht 200g',
     developer: 'Nestle',
@@ -39,13 +34,11 @@ const items = [
     developer: 'Toddy',
     img: 'https://source.unsplash.com/user/willianjusten/300x145',
     price: 'R$ 7,99'
+  },
+  {
+    title: 'Achocolatado em pó branco 300g',
+    developer: 'Toddy',
+    img: 'https://source.unsplash.com/user/willianjusten/300x145',
+    price: 'R$ 7,99'
   }
 ]
-describe('<ProductsSliderRegular />', () => {
-  it('should render with 6 active items', () => {
-    const { container } = renderWithTheme(
-      <ProductsSliderRegular items={items} />
-    )
-    expect(container.querySelectorAll('.slick-active')).toHaveLength(6)
-  })
-})

@@ -1,3 +1,4 @@
+import 'match-media-mock'
 import { fireEvent, screen } from '@testing-library/react'
 import MenuUserInfo from 'components/MenuUserInfo'
 import { renderWithTheme } from 'utils/tests/helpers'

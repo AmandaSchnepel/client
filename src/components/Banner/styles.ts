@@ -21,8 +21,8 @@ export const Image = styled.div<ImageProps>`
     background-size: cover;
 
     ${media.greaterThan('medium')`
-    width: 46.1rem;
-    height: 22.2rem;
+    width: 48.1rem;
+    height: 23.2rem;
     border-radius: 1.3rem;
     `}
   `}
