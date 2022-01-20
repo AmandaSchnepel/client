@@ -21,7 +21,8 @@ export default {
     icons: '1.5rem',
     large: '1.8rem',
     xlarge: '2.0rem',
-    xxlarge: '2.4rem'
+    xxlarge: '2.4rem',
+    infos: '2.6rem'
   },
   colors: {
     green: '#207824',
