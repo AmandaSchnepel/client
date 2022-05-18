@@ -37,8 +37,10 @@ export default {
     grayBox: '#939393',
     lightGray1: '#767676',
     lightGray2: '#EAEAEA',
+    grayConter: '#9A9A9A',
     red: '#EF2F2F',
-    lightred: '#ED8383'
+    lightred: '#ED8383',
+    marrom: '#FFC690'
   },
   spacings: {
     xxsmall: '0.55rem',
@@ -55,5 +57,9 @@ export default {
     overlay: 30,
     modal: 40,
     alwaysOnTop: 50
+  },
+  transition: {
+    default: '0.3s ease-in-out',
+    fast: '0.1s ease-in-out'
   }
 }

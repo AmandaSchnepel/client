@@ -1,12 +1,11 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
-
 import Products from '.'
 
 const props = {
   title: 'Creme de leite original uht 200g',
   developer: 'Nestle',
-  img: 'https://source.unsplash.com/user/willianjusten/300x140',
+  img: '/img/produtos/creme-de-leite.png',
   price: 'R$3,69'
 }
 

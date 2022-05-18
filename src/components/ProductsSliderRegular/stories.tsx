@@ -5,7 +5,7 @@ import ProductsSliderRegular from '.'
 import items from './mock'
 
 export default {
-  title: 'ProductsSliderRegular',
+  title: 'Products/ProductsSliderRegular',
   component: ProductsSliderRegular,
   args: { items }
 } as Meta

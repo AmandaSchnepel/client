@@ -44,65 +44,90 @@ const Menu = ({ items, username }: MenuUserProps) => {
 
   return (
     <S.Wrapper>
-      <S.MenuGroup>
-        <MediaMatch lessThan="large">
-          <S.IconWrapper onClick={() => setIsOpen(true)}>
-            <MenuIcon aria-label="Open Menu" />
-          </S.IconWrapper>
-        </MediaMatch>
+      {!!username && (
+        <>
+          <S.MenuGroup>
+            <MediaMatch lessThan="large">
+              <S.IconWrapper onClick={() => setIsOpen(true)}>
+                <MenuIcon aria-label="Open Menu" />
+              </S.IconWrapper>
+            </MediaMatch>
 
-        <S.LinksGroup>
+            <S.LinksGroup>
+              <S.GroupLogo>
+                <Logo size="large" />
+              </S.GroupLogo>
+
+              <MediaMatch greaterThan="large">
+                <S.GroupSpacings1>
+                  <S.ImageMenu src="/img/supermercado.png" />
+                  <S.LinksMenu href="#">Mercado</S.LinksMenu>
+                  <S.IconMenuStyled>
+                    <ArrowIcon aria-label="open Options" />
+                  </S.IconMenuStyled>
+                </S.GroupSpacings1>
+              </MediaMatch>
+
+              <MediaMatch greaterThan="large">
+                <S.GroupSpacings2>
+                  <S.IconMenuSpacing>
+                    <PinIcon aria-label="Pin Location" />
+                  </S.IconMenuSpacing>
+                  <S.LinksMenu href="#">Rua pará 1179</S.LinksMenu>
+                  <S.IconMenuStyled>
+                    <ArrowIcon aria-label="open Location" />
+                  </S.IconMenuStyled>
+                </S.GroupSpacings2>
+              </MediaMatch>
+            </S.LinksGroup>
+            <S.IconsGroupMenu>
+              <MediaMatch greaterThan="large">
+                <S.IconWrapper>
+                  <SearchIcon aria-label="Open Search" />
+                </S.IconWrapper>
+              </MediaMatch>
+
+              <S.IconWrapper>
+                <FavoriteIcon aria-label="Open Favorites" />
+              </S.IconWrapper>
+
+              <MediaMatch greaterThan="large">
+                <S.IconWrapper>
+                  <CartIcon aria-label="Open Cart" />
+                </S.IconWrapper>
+              </MediaMatch>
+
+              <MediaMatch greaterThan="large">
+                <S.IconWrapper>
+                  <UserIcon aria-label="Open User" />
+                </S.IconWrapper>
+              </MediaMatch>
+            </S.IconsGroupMenu>
+          </S.MenuGroup>
+        </>
+      )}
+      {!username && (
+        <S.MenuLogout>
+          <MediaMatch lessThan="large">
+            <S.IconWrapper onClick={() => setIsOpen(true)}>
+              <MenuIcon aria-label="Open Menu" />
+            </S.IconWrapper>
+          </MediaMatch>
+
           <S.GroupLogo>
             <Logo size="large" />
           </S.GroupLogo>
 
           <MediaMatch greaterThan="large">
-            <S.GroupSpacings1>
-              <S.ImageMenu src="/img/supermercado.png" />
-              <S.LinksMenu href="#">Mercado</S.LinksMenu>
-              <S.IconMenuStyled>
-                <ArrowIcon ari-Label="open Options" />
-              </S.IconMenuStyled>
-            </S.GroupSpacings1>
+            <S.ButtonLogin>
+              <S.Cadastrar href="http://localhost:3000/sign-up">
+                Criar conta
+              </S.Cadastrar>
+              <S.Entrar href="http://localhost:3000/sign-in">Entrar</S.Entrar>
+            </S.ButtonLogin>
           </MediaMatch>
-
-          <MediaMatch greaterThan="large">
-            <S.GroupSpacings2>
-              <S.IconMenuSpacing>
-                <PinIcon ari-Label="Pin Location" />
-              </S.IconMenuSpacing>
-              <S.LinksMenu href="#">Rua pará 1179</S.LinksMenu>
-              <S.IconMenuStyled>
-                <ArrowIcon ari-Label="open Location" />
-              </S.IconMenuStyled>
-            </S.GroupSpacings2>
-          </MediaMatch>
-        </S.LinksGroup>
-        <S.IconsGroupMenu>
-          <MediaMatch greaterThan="large">
-            <S.IconWrapper>
-              <SearchIcon aria-label="Open Search" />
-            </S.IconWrapper>
-          </MediaMatch>
-
-          <S.IconWrapper>
-            <FavoriteIcon aria-label="Open Favorites" />
-          </S.IconWrapper>
-
-          <MediaMatch greaterThan="large">
-            <S.IconWrapper>
-              <CartIcon aria-label="Open Cart" />
-            </S.IconWrapper>
-          </MediaMatch>
-
-          <MediaMatch greaterThan="large">
-            <S.IconWrapper>
-              <UserIcon aria-label="Open User" />
-            </S.IconWrapper>
-          </MediaMatch>
-        </S.IconsGroupMenu>
-      </S.MenuGroup>
-
+        </S.MenuLogout>
+      )}
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
         <CloseIcon aria-label="Close Menu" onClick={() => setIsOpen(false)} />
 

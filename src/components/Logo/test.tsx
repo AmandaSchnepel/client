@@ -36,4 +36,12 @@ describe('<Logo />', () => {
       width: '13rem'
     })
   })
+  it('should render a bigger logo', () => {
+    renderWithTheme(<Logo size="xlarge" />)
+    expect(
+      screen.getByLabelText(/Supermercado Jardim/i).parentElement
+    ).toHaveStyle({
+      width: '22.1rem'
+    })
+  })
 })

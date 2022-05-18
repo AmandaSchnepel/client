@@ -138,7 +138,6 @@ export const MenuConfigGroup = styled.div`
     margin: 1.9rem 1rem 0 0.4rem;
   `}
 `
-
 //informações do usuario
 export const GroupUserInfo = styled.div`
   display: flex;
@@ -186,6 +185,48 @@ export const MenuFull = styled.nav<MenuFullProps>`
       width: 2.4rem;
       height: 2.4rem;
     }
+  `}
+`
+export const MenuLogout = styled.div`
+  display: flex;
+  flex-grow: 1;
+  align-content: stretch;
+  justify-content: space-between;
+`
+
+export const ButtonLogin = styled.div`
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+`
+export const Cadastrar = styled.a`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: ${theme.font.regular};
+    color: ${theme.colors.green};
+    font-size: ${theme.sizes.medium};
+    margin: 0 1.5rem 0 0;
+  `}
+`
+export const Entrar = styled.a`
+  ${({ theme }) => css`
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.5rem;
+    height: 4.3rem;
+    font-size: 1.8rem;
+    font-weight: ${theme.font.regular};
+    border-radius: 0.8rem;
+    background: ${theme.colors.green};
+    color: ${theme.colors.white1};
+    border: 0;
+    text-decoration: none;
   `}
 `
 

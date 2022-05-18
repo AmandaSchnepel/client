@@ -1,79 +1,57 @@
 import { UserProps } from 'components/MenuUserInfo'
-import { BannerProps } from 'components/Banner'
-import { ProductsProps } from 'components/Products'
-import { CategoriesProps } from 'components/Categories'
 import { Container } from 'components/Container'
 
 import Line from 'components/Line'
-import ProductsSliderRegular from 'components/ProductsSliderRegular'
-import BannerSlider from 'components/BannerSlider'
-import CategoriesSlider from 'components/CategoriesSlider'
-import Heading from 'components/Heading'
+import BannerWork from 'components/BannerWork'
+import BannerBusiness from 'components/BannerBusiness'
+import BannerInstall from 'components/BannerInstall'
+import BannerOptions from 'components/BannerOptions'
+import Footer from 'components/Footer'
+import ImagesInfo from 'components/ImagesInfo'
 import Menu from 'components/Menu'
-
 import * as S from './styles'
 
 export type HomeTemplateProps = {
   menu: UserProps[]
-  categories: CategoriesProps[]
-  banners: BannerProps[]
-  productsSlider1Regular: ProductsProps[]
-  productsSlider2Regular: ProductsProps[]
 }
 
-const Home = ({
-  menu,
-  categories,
-  banners,
-  productsSlider1Regular,
-  productsSlider2Regular
-}: HomeTemplateProps) => (
+const Home = ({ menu }: HomeTemplateProps) => (
   <S.Wrapper>
-    <section>
-      <Container>
-        <Menu items={menu} />
-      </Container>
+    <Container>
+      <Menu items={menu} />
+    </Container>
 
-      <Container>
-        <Line />
-      </Container>
+    <Container>
+      <Line />
+    </Container>
 
-      <Container>
-        <S.SectionSpacings>
-          <S.Categories>
-            <Heading color="black2"> Categorias </Heading>
-          </S.Categories>
-          <CategoriesSlider items={categories} />
-        </S.SectionSpacings>
-      </Container>
+    <Container>
+      <BannerOptions />
+    </Container>
 
-      <Container>
-        <S.SectionSpacings>
-          <S.Title>
-            <Heading color="black2"> Ofertas </Heading>
-          </S.Title>
-          <BannerSlider items={banners} />
-        </S.SectionSpacings>
-      </Container>
+    <Container>
+      <S.SectionSpacings>
+        <ImagesInfo />
+      </S.SectionSpacings>
+    </Container>
 
-      <Container>
-        <S.SectionSpacings>
-          <S.Title>
-            <Heading color="black2"> Mais vendidos </Heading>
-          </S.Title>
-          <ProductsSliderRegular items={productsSlider1Regular} />
-        </S.SectionSpacings>
-      </Container>
+    <S.SectionSpacings>
+      <BannerInstall />
+    </S.SectionSpacings>
 
-      <Container>
-        <S.SectionSpacings>
-          <S.Title>
-            <Heading color="black2"> Mais procurados </Heading>
-          </S.Title>
-          <ProductsSliderRegular items={productsSlider2Regular} />
-        </S.SectionSpacings>
-      </Container>
-    </section>
+    <Container>
+      <S.SectionSpacings>
+        <BannerBusiness />
+      </S.SectionSpacings>
+    </Container>
+
+    <Container>
+      <S.SectionSpacings>
+        <BannerWork />
+      </S.SectionSpacings>
+    </Container>
+
+    <Footer />
   </S.Wrapper>
 )
 

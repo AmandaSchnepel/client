@@ -11,6 +11,10 @@ const wrapperModifiers = {
   large: () => css`
     width: 13rem;
     height: 5.3rem;
+  `,
+  xlarge: () => css`
+    width: 22.1rem;
+    height: 5.1rem;
   `
 }
 

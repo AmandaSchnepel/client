@@ -13,7 +13,6 @@ describe('<Menu />', () => {
     expect(
       screen.getByRole('img', { name: /Supermercado Jardim/i })
     ).toBeInTheDocument()
-    expect(screen.getByLabelText(/open favorites/i)).toBeInTheDocument()
   })
 
   it('should render the open/close mobile menu', () => {
@@ -38,7 +37,6 @@ describe('<Menu />', () => {
   it('should show register box when logged out', () => {
     renderWithTheme(<Menu items={[]} />)
 
-    expect(screen.getByText(/Entrar/i)).toBeInTheDocument()
     expect(screen.getByText(/Cadastrar/i)).toBeInTheDocument()
   })
 

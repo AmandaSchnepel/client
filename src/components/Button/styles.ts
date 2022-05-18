@@ -1,7 +1,7 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import { ButtonProps } from '.'
 
-type WrapperProps = Pick<ButtonProps, 'size'>
+export type WrapperProps = Pick<ButtonProps, 'size'>
 
 const wrapperModifires = {
   xxsmall: (theme: DefaultTheme) => css`
@@ -28,6 +28,12 @@ const wrapperModifires = {
     height: 4rem;
     width: 32rem;
     font-size: ${theme.sizes.medium};
+    @media (max-width: 320px) {
+      width: 28rem;
+    }
+    @media (max-width: 280px) {
+      width: 26rem;
+    }
   `
 }
 
