@@ -10,10 +10,12 @@ export const Wrapper = styled.div`
       width: 3.5rem;
       height: 3.5rem;
       background: ${theme.colors.grayConter};
+      font-weight: ${theme.font.medium};
       color: #fff;
-      font-size: 2.8rem;
+      font-size: 2rem;
       border-radius: 3rem;
       border: none;
+      cursor: pointer;
     }
 
     > input {

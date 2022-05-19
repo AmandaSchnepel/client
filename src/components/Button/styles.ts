@@ -34,6 +34,11 @@ const wrapperModifires = {
     @media (max-width: 280px) {
       width: 26rem;
     }
+  `,
+  xlarge: (theme: DefaultTheme) => css`
+    width: 41.2rem;
+    height: 5rem;
+    font-size: ${theme.sizes.xlarge};
   `
 }
 

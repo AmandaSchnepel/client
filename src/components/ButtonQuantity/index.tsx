@@ -22,7 +22,7 @@ const ButtonQuantity: React.FunctionComponent<ButtonQualityProps> = () => {
         -
       </button>
 
-      <input type="number" defaultValue={count} />
+      <input type="number" value={count} />
 
       <button aria-label="aumentar" onClick={inc}>
         +
