@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -16,6 +17,10 @@ export const Wrapper = styled.div`
       border-radius: 3rem;
       border: none;
       cursor: pointer;
+
+      ${media.lessThan('medium')`
+      width: 2.5rem;
+      height: 2.5rem;`}
     }
 
     > input {
@@ -24,6 +29,10 @@ export const Wrapper = styled.div`
       width: 8.8rem;
       font-size: 1.5rem;
       cursor: pointer;
+
+      ${media.lessThan('medium')`
+      width: 6rem;`}
+    }
 
       &:focus {
         box-shadow: 0 0 0 0;
@@ -41,5 +50,6 @@ export const Wrapper = styled.div`
     > input[type='number'] {
       -moz-appearance: textfield;
     }
+
   `}
 `

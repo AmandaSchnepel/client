@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,6 +16,11 @@ export const Developer = styled.h1`
     font-size: 2rem;
     font-weight: ${theme.font.regular};
     text-decoration: none;
+
+    ${media.lessThan('medium')`
+    font-size: 1.8rem;
+    
+  `}
   `}
 `
 
@@ -44,9 +50,14 @@ export const Title = styled.h1`
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+
+    ${media.lessThan('medium')`
+    width: 30rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  `}
   `}
 `
-
 export const div2 = styled.div`
   display: flex;
   margin: 2rem 0 0 0;
@@ -58,6 +69,12 @@ export const Price = styled.h1`
     color: ${theme.colors.black1};
     font-weight: 600;
     margin: 0 14.5rem 0 0;
+
+    ${media.lessThan('medium')`
+    font-size: 2.5rem;
+    margin: 0 10rem 0 0;
+    
+  `}
   `}
 `
 
@@ -79,5 +96,11 @@ export const Description = styled.h3`
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 4;
+
+    ${media.lessThan('medium')`
+      max-width: 30rem;
+      font-size: 1.5rem;
+      
+    `}
   `}
 `

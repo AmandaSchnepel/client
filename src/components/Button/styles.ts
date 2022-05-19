@@ -1,4 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components'
+import media from 'styled-media-query'
 import { ButtonProps } from '.'
 
 export type WrapperProps = Pick<ButtonProps, 'size'>
@@ -39,6 +40,13 @@ const wrapperModifires = {
     width: 41.2rem;
     height: 5rem;
     font-size: ${theme.sizes.xlarge};
+
+    ${media.lessThan('medium')`
+    width: 30rem;
+    height: 4rem;
+    font-size: ${theme.sizes.large};
+    
+  `}
   `
 }
 
