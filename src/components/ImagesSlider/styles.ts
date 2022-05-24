@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.section`
   ${({ theme }) => css`
     .slick-dots {
+      width: 30rem;
+      height: 3rem;
       list-style: none;
       display: flex !important;
       align-items: center;
@@ -18,8 +20,12 @@ export const Wrapper = styled.section`
         justify-content: center;
         margin: 0 ${theme.spacings.xxsmall};
         cursor: pointer;
+        transition: box-shadow ${theme.transition.default};
         &.slick-active {
           background: ${theme.colors.green};
+        }
+        &:focus-within {
+          box-shadow: 0 0 0 0.3rem ${theme.colors.green};
         }
       }
       button {
@@ -28,5 +34,12 @@ export const Wrapper = styled.section`
         height: 1.2rem;
         cursor: pointer;
       }
+    }
+    .slick-slide {
+      visibility: hidden;
+      &.slick-active.slick-current {
+        visibility: visible;
+      }
+    }
   `}
 `

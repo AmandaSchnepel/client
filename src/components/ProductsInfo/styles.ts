@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  maxwidth: 41rem;
+  width: 41rem;
 `
 export const div = styled.div`
   display: flex;
@@ -26,14 +26,14 @@ export const Developer = styled.h1`
 
 export const FavButton = styled.div`
   ${({ theme }) => css`
-display: flex;
-flex-grow: 1;
-justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 
 > svg{
 cursor: pointer;
 width: 2.4rem;
 height: 2.4rem;
+justify-content: flex-end;
 color: ${theme.colors.blackgray};
 `}
 `
