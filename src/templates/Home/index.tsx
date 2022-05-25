@@ -1,6 +1,7 @@
 import { UserProps } from 'components/MenuUserInfo'
 import { Container } from 'components/Container'
 
+import MediaMatch from 'components/MediaMatch'
 import Line from 'components/Line'
 import BannerWork from 'components/BannerWork'
 import BannerBusiness from 'components/BannerBusiness'
@@ -17,41 +18,43 @@ export type HomeTemplateProps = {
 
 const Home = ({ menu }: HomeTemplateProps) => (
   <S.Wrapper>
-    <Container>
-      <Menu items={menu} />
-    </Container>
+    <MediaMatch greaterThan="large">
+      <Container>
+        <Menu items={menu} />
+      </Container>
 
-    <Container>
-      <Line />
-    </Container>
+      <Container>
+        <Line />
+      </Container>
 
-    <Container>
-      <BannerOptions />
-    </Container>
+      <Container>
+        <BannerOptions />
+      </Container>
 
-    <Container>
+      <Container>
+        <S.SectionSpacings>
+          <ImagesInfo />
+        </S.SectionSpacings>
+      </Container>
+
       <S.SectionSpacings>
-        <ImagesInfo />
+        <BannerInstall />
       </S.SectionSpacings>
-    </Container>
 
-    <S.SectionSpacings>
-      <BannerInstall />
-    </S.SectionSpacings>
+      <Container>
+        <S.SectionSpacings>
+          <BannerBusiness />
+        </S.SectionSpacings>
+      </Container>
 
-    <Container>
-      <S.SectionSpacings>
-        <BannerBusiness />
-      </S.SectionSpacings>
-    </Container>
+      <Container>
+        <S.SectionSpacings>
+          <BannerWork />
+        </S.SectionSpacings>
+      </Container>
 
-    <Container>
-      <S.SectionSpacings>
-        <BannerWork />
-      </S.SectionSpacings>
-    </Container>
-
-    <Footer />
+      <Footer />
+    </MediaMatch>
   </S.Wrapper>
 )
 

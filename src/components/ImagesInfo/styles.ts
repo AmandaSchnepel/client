@@ -39,5 +39,5 @@ export const Title = styled.div`
 export const Spacings = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 7rem 9rem 7rem;
+  margin: 0 2rem 0 2rem;
 `

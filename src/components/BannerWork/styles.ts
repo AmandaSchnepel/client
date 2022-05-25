@@ -13,14 +13,14 @@ type ImageProps = {
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
     display: flex;
-    width: 68.5rem;
-    height: 57.7rem;
+    width: 48rem;
+    height: 40rem;
     align-items: center;
     background-image: url(${src});
     justify-content: center;
     background-position: center center;
     background-size: cover;
-    margin: 0 6rem 0 -5rem;
+    margin: 0 10rem 0 -5rem;
   `}
 `
 
@@ -54,7 +54,7 @@ export const Button = styled.button`
   ${({ theme }) => css`
     cursor: pointer;
     width: 41.2rem;
-    height: 7.8rem;
+    height: 7rem;
     font-size: 3rem;
     border: solid 0.3rem;
     border-radius: 0.8rem;
@@ -62,6 +62,6 @@ export const Button = styled.button`
     font-weight: ${theme.font.regular};
     background: ${theme.colors.white1};
     color: ${theme.colors.green};
-    margin: 3rem 0 0 3rem;
+    margin: 3rem 0 0 4rem;
   `}
 `

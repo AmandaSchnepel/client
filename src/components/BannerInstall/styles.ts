@@ -29,14 +29,14 @@ export const Image = styled.div<ImageProps>`
     justify-content: center;
     background-position: center center;
     background-size: cover;
-    margin: 0 0 0 -8rem;
+    margin: 0 0 0 -3rem;
   `}
 `
 
 export const Group = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 22rem;
+  padding: 0 0 0 18rem;
 `
 
 export const Title = styled.div`

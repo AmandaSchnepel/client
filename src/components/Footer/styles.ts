@@ -9,13 +9,16 @@ export const Backgoround = styled.div`
     display: flex;
     width: 100%;
     height: 55.8rem;
+    padding-left: 8rem;
+
+    padding-right: 8rem;
     background: ${theme.colors.green};
     align-items: center;
     justify-content: center;
   `}
 `
 export const Logo = styled.div`
-  margin: 10.5rem 20.5rem 0 0;
+  margin: 10.5rem 19rem 0 0;
 `
 
 export const Container = styled.div`

@@ -37,7 +37,7 @@ export const Button = styled.button`
   ${({ theme }) => css`
     cursor: pointer;
     width: 41.2rem;
-    height: 7.8rem;
+    height: 7rem;
     font-size: 3rem;
     border: solid 0.3rem;
     border-radius: 0.8rem;
@@ -56,13 +56,13 @@ type ImageProps = {
 export const Image = styled.div<ImageProps>`
   ${({ src }) => css`
     display: flex;
-    width: 57.3rem;
-    height: 55.6rem;
+    width: 40rem;
+    height: 40rem;
     align-items: center;
     background-image: url(${src});
     justify-content: center;
     background-position: center center;
     background-size: cover;
-    margin: 0 -5rem 0 7rem;
+    margin: 0 -5rem 0 8rem;
   `}
 `
