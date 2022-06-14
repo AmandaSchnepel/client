@@ -4,7 +4,7 @@ import { ProductsProps } from '.'
 
 const wrapperModifires = {
   regular: () => css`
-    ${media.lessThan('medium')`
+    ${media.lessThan('small')`
    height: 18.3rem;
     width: 12.2rem;
 
@@ -90,6 +90,7 @@ export const Wrapper = styled.div<Pick<ProductsProps, 'size'>>`
   ${({ theme, size }) => css`
     position: relative;
     display: flex;
+    margin: 0 1rem 3rem 1rem;
     flex-direction: column;
     width: 100%;
     height: 100%;

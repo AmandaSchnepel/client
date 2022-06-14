@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react'
 import { SetoresProps } from 'components/Setores'
-import items from './mock'
 import SetoresSlider from '.'
+import items from './mock'
 
 export default {
   title: 'SetoresSlider',

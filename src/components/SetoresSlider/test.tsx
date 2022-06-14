@@ -21,7 +21,6 @@ const items = [
 describe('<SetoresSlider />', () => {
   it('should render with 3 active items', () => {
     const { container } = renderWithTheme(<SetoresSlider items={items} />)
-
     expect(container.querySelectorAll('.slick-slide')).toHaveLength(3)
   })
 })

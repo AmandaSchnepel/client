@@ -1,11 +1,19 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.main`
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  justify-content: center;
+position: fixed;
+right: 13%;
+top: 50%;
+margin-top: 26rem;
+flex-grow: 1;
+display: flex;
+justify-content: center;
+
+@media(max-width: 1024px){
+right: 15%;
+top: 50%;
+    }
+   }
 `
 
 export const Background = styled.div`

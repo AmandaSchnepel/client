@@ -38,6 +38,10 @@ ${({ theme }) => css`
   transform: translateX(-50%);
     }
    }
+   @media(max-width: 1280px){
+    font-size: 4.5rem;
+      }
+     }
 `
 
 type ImageProps = {

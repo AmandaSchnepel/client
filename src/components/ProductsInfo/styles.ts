@@ -5,9 +5,18 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 41rem;
+  ${media.lessThan('medium')`
+   width: 32rem;
+    
+  `}
+  ${media.lessThan('small')`
+   width: 26rem;
+  `}
 `
 export const div = styled.div`
   display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
 `
 
 export const Developer = styled.h1`
@@ -27,6 +36,7 @@ export const Developer = styled.h1`
 export const FavButton = styled.div`
   ${({ theme }) => css`
   display: flex;
+  flex-grow: 1;
   justify-content: flex-end;
 
 > svg{
@@ -50,16 +60,22 @@ export const Title = styled.h1`
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    margin: 0.5rem 0 0 0;
 
     ${media.lessThan('medium')`
-    width: 30rem;
+    width: 32rem;
     font-size: 2rem;
     line-height: 3rem;
+  `}
+    ${media.lessThan('small')`
+    max-width: 26rem;
   `}
   `}
 `
 export const div2 = styled.div`
   display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
   margin: 2rem 0 0 0;
 `
 
@@ -68,11 +84,9 @@ export const Price = styled.h1`
     font-size: 3rem;
     color: ${theme.colors.black1};
     font-weight: 600;
-    margin: 0 14.5rem 0 0;
 
     ${media.lessThan('medium')`
     font-size: 2.5rem;
-    margin: 0 10rem 0 0;
     
   `}
   `}
@@ -98,9 +112,13 @@ export const Description = styled.h3`
     -webkit-line-clamp: 4;
 
     ${media.lessThan('medium')`
-      max-width: 30rem;
+      max-width: 32rem;
       font-size: 1.5rem;
       
     `}
+
+    ${media.lessThan('small')`
+    max-width: 26rem;
+  `}
   `}
 `

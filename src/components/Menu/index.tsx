@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import Link from 'next/link'
+
+import React, { useState } from 'react'
 // icon abrir menu
 import { Menu as MenuIcon } from '@styled-icons/heroicons-outline/Menu'
 //icon favoritos
@@ -55,7 +57,11 @@ const Menu = ({ items, username }: MenuUserProps) => {
 
             <S.LinksGroup>
               <S.GroupLogo>
-                <Logo size="large" />
+                <Link href="/" passHref>
+                  <a>
+                    <Logo size="large" />
+                  </a>
+                </Link>
               </S.GroupLogo>
 
               <MediaMatch greaterThan="large">
@@ -115,7 +121,11 @@ const Menu = ({ items, username }: MenuUserProps) => {
           </MediaMatch>
 
           <S.GroupLogo>
-            <Logo size="large" />
+            <Link href="/" passHref>
+              <a>
+                <Logo size="large" />
+              </a>
+            </Link>
           </S.GroupLogo>
 
           <MediaMatch greaterThan="large">

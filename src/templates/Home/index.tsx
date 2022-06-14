@@ -11,13 +11,26 @@ import Footer from 'components/Footer'
 import ImagesInfo from 'components/ImagesInfo'
 import Menu from 'components/Menu'
 import * as S from './styles'
+import SetoresSlider from 'components/SetoresSlider'
+import { SetoresProps } from 'components/Setores'
 
 export type HomeTemplateProps = {
   menu: UserProps[]
+  setores: SetoresProps[]
 }
 
-const Home = ({ menu }: HomeTemplateProps) => (
+const Home = ({ menu, setores }: HomeTemplateProps) => (
   <S.Wrapper>
+    <MediaMatch lessThan="large">
+      <Container>
+        <S.Title>
+          Faça suas <strong>compras</strong>
+          <br /> sem sair de <strong>casa</strong>.{' '}
+        </S.Title>
+        <SetoresSlider items={setores} />
+      </Container>
+    </MediaMatch>
+
     <MediaMatch greaterThan="large">
       <Container>
         <Menu items={menu} />

@@ -1,11 +1,16 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
+import * as ImagesStyles from 'components/Images/styles'
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
+    width: 30rem;
+    ${media.lessThan('small')`
+  width: 26rem;
+`}
     .slick-dots {
-      width: 30rem;
-      height: 3rem;
       list-style: none;
+      max-width: 30rem;
       display: flex !important;
       align-items: center;
       justify-content: center;
@@ -20,12 +25,8 @@ export const Wrapper = styled.section`
         justify-content: center;
         margin: 0 ${theme.spacings.xxsmall};
         cursor: pointer;
-        transition: box-shadow ${theme.transition.default};
         &.slick-active {
           background: ${theme.colors.green};
-        }
-        &:focus-within {
-          box-shadow: 0 0 0 0.3rem ${theme.colors.green};
         }
       }
       button {
@@ -35,11 +36,19 @@ export const Wrapper = styled.section`
         cursor: pointer;
       }
     }
-    .slick-slide {
-      visibility: hidden;
-      &.slick-active.slick-current {
-        visibility: visible;
-      }
-    }
+    ${media.greaterThan('large')`
+  ${ImagesStyles.Wrapper} {
+    max-width: 30rem;
+  }
+
+`}
+    ${media.lessThan('medium')`
+  ${ImagesStyles.Wrapper} {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+`}
   `}
 `

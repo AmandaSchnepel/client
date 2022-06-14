@@ -3,6 +3,7 @@ import { ImagesProps } from 'components/Images'
 import { ProductsInfoProps } from 'components/ProductsInfo'
 import { Container } from 'components/Container'
 
+import MediaMatch from 'components/MediaMatch'
 import Line from 'components/Line'
 import Footer from 'components/Footer'
 import Menu from 'components/Menu'
@@ -27,13 +28,17 @@ const Produtos = ({ image, items, menu }: ProdutosProps) => (
     </Container>
 
     <S.Container>
-      <ImagesSlider items={image} aria-label="gallery" />
+      <S.div>
+        <ImagesSlider items={image} aria-label="gallery" />
+      </S.div>
       {items.map((item, index) => (
         <ProductsInfo key={index} {...item} />
       ))}
     </S.Container>
 
-    <Footer />
+    <MediaMatch greaterThan="large">
+      <Footer />
+    </MediaMatch>
   </S.Wrapper>
 )
 

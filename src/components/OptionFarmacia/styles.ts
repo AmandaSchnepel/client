@@ -141,6 +141,12 @@ ${({ theme }) => css`
   transform: translateX(-50%);
     }
    }
+   @media(max-width: 1280px){
+    position: absolute;
+    left:76.5%;
+    transform: translateX(-50%);
+      }
+     }
 `
 type ImageProps = {
   src: string

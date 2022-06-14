@@ -42,10 +42,11 @@ const wrapperModifires = {
     font-size: ${theme.sizes.xlarge};
 
     ${media.lessThan('medium')`
-    width: 30rem;
-    height: 4rem;
     font-size: ${theme.sizes.large};
-    
+    width: 32rem;
+  `}
+    ${media.lessThan('small')`
+    width: 26rem;
   `}
   `
 }

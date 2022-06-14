@@ -13,7 +13,16 @@ const settings: SliderSettings = {
   arrows: false,
   vertical: false,
   verticalSwiping: false,
-  infinite: false
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 1170,
+      settings: {
+        vertical: false,
+        verticalSwiping: false
+      }
+    }
+  ]
 }
 
 const ImagesSlider = ({ items }: ImagesSliderProps) => (
