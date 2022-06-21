@@ -40,25 +40,25 @@ const Favoritos = ({ menu, products }: FavoritosTemplateProps) => (
       </Container>
     </MediaMatch>
 
-    <MediaMatch lessThan="small">
-      <Container>
-        <S.Title2>
-          <Heading color="black2"> Favoritos </Heading>
-        </S.Title2>
+    <S.Center>
+      <MediaMatch lessThan="small">
+        <Container>
+          <S.Title2>
+            <Heading color="black2"> Favoritos </Heading>
+          </S.Title2>
 
-        <S.Linha aria-label="linha"></S.Linha>
+          <S.Linha aria-label="linha"></S.Linha>
 
-        <S.Center>
           <S.Container2>
             {products?.map((product, index) => (
               <Products size="medium" key={index} {...product} />
             ))}
           </S.Container2>
-        </S.Center>
-      </Container>
+        </Container>
 
-      <MenuMobile />
-    </MediaMatch>
+        <MenuMobile />
+      </MediaMatch>
+    </S.Center>
 
     <MediaMatch greaterThan="large">
       <Footer />

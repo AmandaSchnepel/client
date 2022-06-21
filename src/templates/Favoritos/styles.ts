@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.main``
-
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`
 export const Title = styled.div`
   padding: 4rem 0 1.5rem 0;
 `
@@ -16,10 +19,7 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
-export const Center = styled.div`
-  display: flex;
-  justify-content: center;
-`
+
 export const Container2 = styled.div`
   display: flex;
   flex-wrap: wrap;
