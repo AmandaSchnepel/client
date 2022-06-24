@@ -3,9 +3,12 @@ import * as S from './styles'
 
 export type ButtonQualityProps = {
   count: number
+  size?: 'regular' | 'small'
 }
 
-const ButtonQuantity: React.FunctionComponent<ButtonQualityProps> = () => {
+const ButtonQuantity: React.FunctionComponent<ButtonQualityProps> = ({
+  size = 'regular'
+}: ButtonQualityProps) => {
   const [count, setCount] = React.useState<number>(1)
 
   const inc = () => {
@@ -17,7 +20,7 @@ const ButtonQuantity: React.FunctionComponent<ButtonQualityProps> = () => {
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper size={size}>
       <button aria-label="diminuir" onClick={dec}>
         -
       </button>
