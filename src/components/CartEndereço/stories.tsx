@@ -1,9 +1,16 @@
 import { Story, Meta } from '@storybook/react'
-import CartEndereço from '.'
+import CartEndereço, { CartEndereçoProps } from '.'
+
+import mockItems from './mock'
 
 export default {
   title: 'CartEndereço',
-  component: CartEndereço
+  component: CartEndereço,
+  args: {
+    items: mockItems
+  }
 } as Meta
 
-export const Default: Story = () => <CartEndereço />
+export const Default: Story<CartEndereçoProps> = (args) => (
+  <CartEndereço {...args} />
+)

@@ -32,10 +32,10 @@ export const Wrapper = styled.div<WrapperProps>`
     color: ${theme.colors.green};
 
     ${media.greaterThan('medium')`
-    font-size: ${theme.sizes.medium};
+    font-size: 1.5rem;
 `}
     ${media.lessThan('medium')`
-    font-size: ${theme.sizes.small};
+    font-size: 1.2rem;
 `}
     ${!!hasIcon && wrapperModifiers.withIcon(theme)}
   `}

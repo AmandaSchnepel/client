@@ -3,26 +3,27 @@ import React, { useState } from 'react'
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
 import ButtonLink from 'components/ButtonLink'
-import EndereçoInfo, { EndereçoInfoProps } from 'components/EndereçoInfo'
+import PaymentOptions, { PaymentOptionsProps } from 'components/PaymentOptions'
 import * as S from './styles'
 
-export type CartEndereçoProps = {
-  items: EndereçoInfoProps[]
+export type CartPaymentsProps = {
+  items: PaymentOptionsProps[]
 }
-const CartEndereço = ({ items }: CartEndereçoProps) => {
+
+const CartPayments = ({ items }: CartPaymentsProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <S.Wrapper>
       <S.Container>
-        <S.Title>Endereço de entrega</S.Title>
+        <S.Title>Metodo de pagamento</S.Title>
         <S.Content onClick={() => setIsOpen(true)}>
-          <ButtonLink>Mudar</ButtonLink>
+          <ButtonLink>+add</ButtonLink>
         </S.Content>
       </S.Container>
 
-      {items.map((item) => (
-        <EndereçoInfo key={item.title} {...item} />
+      {items.map((item, index) => (
+        <PaymentOptions key={index} {...item} />
       ))}
 
       <S.MenuFull aria-hidden={!isOpen} isOpen={isOpen}>
@@ -31,4 +32,5 @@ const CartEndereço = ({ items }: CartEndereçoProps) => {
     </S.Wrapper>
   )
 }
-export default CartEndereço
+
+export default CartPayments
