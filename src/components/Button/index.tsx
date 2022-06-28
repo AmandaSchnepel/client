@@ -7,7 +7,14 @@ type ButtonTypes =
 
 export type ButtonProps = {
   children?: React.ReactNode
-  size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge'
+  size?:
+    | 'xxsmall'
+    | 'xsmall'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'xlarge'
+    | 'ButtonBanner'
   as?: React.ElementType
 } & ButtonTypes
 

@@ -48,6 +48,17 @@ const wrapperModifires = {
     ${media.lessThan('small')`
     width: 26rem;
   `}
+  `,
+  ButtonBanner: (theme: DefaultTheme) => css`
+    width: 30.2rem;
+    height: 5rem;
+    font-size: ${theme.sizes.xlarge};
+
+    ${media.lessThan('medium')`
+  font-size: ${theme.sizes.medium};
+  width: 12rem;
+  height: 3.4rem;
+`}
   `
 }
 
