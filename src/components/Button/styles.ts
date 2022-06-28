@@ -8,6 +8,7 @@ const wrapperModifires = {
   xxsmall: (theme: DefaultTheme) => css`
     height: 2.7rem;
     width: 14rem;
+    border-radius: 0.8rem;
     font-size: ${theme.sizes.small};
   `,
   xsmall: (theme: DefaultTheme) => css`
