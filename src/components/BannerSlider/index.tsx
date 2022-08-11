@@ -30,6 +30,13 @@ const settings: SliderSettings = {
       }
     },
     {
+      breakpoint: 820,
+      settings: {
+        arrows: false,
+        slidesToShow: 1.4
+      }
+    },
+    {
       breakpoint: 800,
       settings: {
         arrows: false,
@@ -37,31 +44,45 @@ const settings: SliderSettings = {
       }
     },
     {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        slidesToShow: 1.7
+      }
+    },
+    {
       breakpoint: 650,
       settings: {
         arrows: false,
-        slidesToShow: 2
+        slidesToShow: 1.6
+      }
+    },
+    {
+      breakpoint: 540,
+      settings: {
+        arrows: false,
+        slidesToShow: 1.9
       }
     },
     {
       breakpoint: 450,
       settings: {
         arrows: false,
-        slidesToShow: 1.5
+        slidesToShow: 1.6
       }
     },
     {
       breakpoint: 375,
       settings: {
         arrows: false,
-        slidesToShow: 1.2
+        slidesToShow: 1.3
       }
     },
     {
       breakpoint: 360,
       settings: {
         arrows: false,
-        slidesToShow: 1
+        slidesToShow: 1.4
       }
     },
     {
@@ -75,7 +96,7 @@ const settings: SliderSettings = {
       breakpoint: 280,
       settings: {
         arrows: false,
-        slidesToShow: 1
+        slidesToShow: 1.1
       }
     }
   ],

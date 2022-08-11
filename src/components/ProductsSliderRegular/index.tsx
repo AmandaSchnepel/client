@@ -11,7 +11,7 @@ type SliderRegularProps = {
 }
 
 const settings: SliderSettings = {
-  slidesToShow: 5.5,
+  slidesToShow: 5.2,
   infinite: false,
   lazyLoad: 'progressive',
   responsive: [
@@ -19,7 +19,7 @@ const settings: SliderSettings = {
       breakpoint: 1375,
       settings: {
         arrows: false,
-        slidesToShow: 5.4
+        slidesToShow: 4.8
       }
     },
     {
@@ -33,14 +33,14 @@ const settings: SliderSettings = {
       breakpoint: 820,
       settings: {
         arrows: false,
-        slidesToShow: 3.6
+        slidesToShow: 3.1
       }
     },
     {
       breakpoint: 768,
       settings: {
         arrows: false,
-        slidesToShow: 3.4
+        slidesToShow: 4.15
       }
     },
     {
@@ -51,6 +51,13 @@ const settings: SliderSettings = {
       }
     },
     {
+      breakpoint: 540,
+      settings: {
+        arrows: false,
+        slidesToShow: 2.9
+      }
+    },
+    {
       breakpoint: 450,
       settings: {
         arrows: false,
@@ -58,38 +65,45 @@ const settings: SliderSettings = {
       }
     },
     {
-      breakpoint: 400,
+      breakpoint: 414,
       settings: {
         arrows: false,
         slidesToShow: 2.8
       }
     },
     {
-      breakpoint: 375,
+      breakpoint: 400,
       settings: {
         arrows: false,
         slidesToShow: 2.7
       }
     },
     {
+      breakpoint: 375,
+      settings: {
+        arrows: false,
+        slidesToShow: 2.5
+      }
+    },
+    {
       breakpoint: 360,
       settings: {
         arrows: false,
-        slidesToShow: 2.6
+        slidesToShow: 2.5
       }
     },
     {
       breakpoint: 320,
       settings: {
         arrows: false,
-        slidesToShow: 2.3
+        slidesToShow: 2.15
       }
     },
     {
       breakpoint: 280,
       settings: {
         arrows: false,
-        slidesToShow: 2
+        slidesToShow: 1.9
       }
     }
   ],
@@ -101,7 +115,7 @@ const ProductsSliderRegular = ({ items }: SliderRegularProps) => (
   <S.Wrapper>
     <Slider settings={settings}>
       {items.map((item, index) => (
-        <Products key={index} {...item} />
+        <Products size="regular" key={index} {...item} />
       ))}
     </Slider>
   </S.Wrapper>

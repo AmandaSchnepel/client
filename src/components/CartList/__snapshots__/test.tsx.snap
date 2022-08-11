@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CartList /> should render the cart list 1`] = `
-.c8 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +16,7 @@ exports[`<CartList /> should render the cart list 1`] = `
   justify-content: center;
 }
 
-.c8 > button {
+.c9 > button {
   background: #9A9A9A;
   font-weight: 500;
   color: #fff;
@@ -26,53 +26,54 @@ exports[`<CartList /> should render the cart list 1`] = `
   cursor: pointer;
 }
 
-.c8 > input {
+.c9 > input {
   border: 0;
   text-align: center;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-.c8 > input:focus {
+.c9 > input:focus {
   box-shadow: 0 0 0 0;
   border: 0 none;
   outline: 0;
 }
 
-.c8 > input[type='number']::-webkit-outer-spin-button,
-.c8 input[type='number']::-webkit-inner-spin-button {
+.c9 > input[type='number']::-webkit-outer-spin-button,
+.c9 input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.c8 > input[type='number'] {
+.c9 > input[type='number'] {
   -moz-appearance: textfield;
 }
 
-.c8 > button {
+.c9 > button {
   width: 2rem;
   height: 2rem;
   font-size: 1.5rem;
 }
 
-.c8 > input {
+.c9 > input {
   width: 4rem;
   font-size: 1.3rem;
 }
 
-.c1 {
+.c2 {
+  width: 100%;
   padding: 2.4rem;
   border-bottom: 0.1rem solid #D6D6D6;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c3 {
+.c4 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -81,13 +82,13 @@ exports[`<CartList /> should render the cart list 1`] = `
   height: 5.5rem;
 }
 
-.c3 img {
+.c4 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.c4 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,7 +102,7 @@ exports[`<CartList /> should render the cart list 1`] = `
   flex-direction: column;
 }
 
-.c5 {
+.c6 {
   font-size: 1.6rem;
   color: #212529;
   font-weight: 400;
@@ -114,13 +115,13 @@ exports[`<CartList /> should render the cart list 1`] = `
   -webkit-line-clamp: 4;
 }
 
-.c6 {
+.c7 {
   font-size: 2rem;
   color: #212529;
   font-weight: 500;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -136,6 +137,7 @@ exports[`<CartList /> should render the cart list 1`] = `
 }
 
 .c0 {
+  width: 100%;
   background: #FFFFFF;
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,39 +146,59 @@ exports[`<CartList /> should render the cart list 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-self: start;
-  -ms-flex-item-align: start;
-  align-self: start;
 }
 
-.c9 {
-  background: #fbfbfb;
-  color: #212529;
-  font-weight: 700;
-  font-size: 1.4rem;
-  padding: 2rem;
+.c1 {
+  max-height: 40rem;
+  overflow-y: auto;
+}
+
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: #fbfbfb;
 }
 
-.c10 {
+.c11 {
   color: #212529;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  color: #212529;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 2rem;
 }
 
 @media (max-width:768px) {
-  .c1 {
+  .c2 {
     padding: 1.6rem 0.5rem;
   }
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c4 {
     margin-right: 1.6rem;
     width: 8.1rem;
     height: 7.5rem;
@@ -184,7 +206,7 @@ exports[`<CartList /> should render the cart list 1`] = `
 }
 
 @media (max-width:768px) {
-  .c5 {
+  .c6 {
     width: 13.9rem;
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -192,19 +214,33 @@ exports[`<CartList /> should render the cart list 1`] = `
 }
 
 @media (max-width:450px) {
-  .c5 {
+  .c6 {
     max-width: 26rem;
   }
 }
 
 @media (max-width:768px) {
-  .c6 {
+  .c7 {
     font-size: 1.4rem;
   }
 }
 
+@media (max-width:768px) {
+  .c10 {
+    background: none;
+    font-size: 1.6rem;
+  }
+}
+
 @media (min-width:768px) {
-  .c9 {
+  .c11 {
+    font-size: 1.6rem;
+    padding: 2.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c12 {
     font-size: 1.6rem;
     padding: 2.4rem;
   }
@@ -222,107 +258,115 @@ exports[`<CartList /> should render the cart list 1`] = `
       <div
         class="c3"
       >
-        <img
-          alt="Creme de leite original uht 200g"
-          src="https://source.unsplash.com/user/willianjusten/300x140"
-        />
-      </div>
-      <div
-        class="c4"
-      >
-        <h3
+        <div
+          class="c4"
+        >
+          <img
+            alt="Creme de leite original uht 200g"
+            src="https://source.unsplash.com/user/willianjusten/300x140"
+          />
+        </div>
+        <div
           class="c5"
         >
-          Creme de leite original uht 200g
-        </h3>
-        <h3
-          class="c6"
-        >
-          R$ 3,69
-        </h3>
-      </div>
-      <div
-        class="c7"
-      >
+          <h3
+            class="c6"
+          >
+            Creme de leite original uht 200g
+          </h3>
+          <h3
+            class="c7"
+          >
+            R$ 3,69
+          </h3>
+        </div>
         <div
           class="c8"
         >
-          <button
-            aria-label="diminuir"
+          <div
+            class="c9"
           >
-            -
-          </button>
-          <input
-            type="number"
-            value="1"
-          />
-          <button
-            aria-label="aumentar"
-          >
-            +
-          </button>
+            <button
+              aria-label="diminuir"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              value="1"
+            />
+            <button
+              aria-label="aumentar"
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="c1"
-  >
     <div
       class="c2"
     >
       <div
         class="c3"
       >
-        <img
-          alt="Bolacha recheada chocolate 126g"
-          src="https://source.unsplash.com/user/willianjusten/300x141"
-        />
-      </div>
-      <div
-        class="c4"
-      >
-        <h3
+        <div
+          class="c4"
+        >
+          <img
+            alt="Bolacha recheada chocolate 126g"
+            src="https://source.unsplash.com/user/willianjusten/300x141"
+          />
+        </div>
+        <div
           class="c5"
         >
-          Bolacha recheada chocolate 126g
-        </h3>
-        <h3
-          class="c6"
-        >
-          R$ 2,49
-        </h3>
-      </div>
-      <div
-        class="c7"
-      >
+          <h3
+            class="c6"
+          >
+            Bolacha recheada chocolate 126g
+          </h3>
+          <h3
+            class="c7"
+          >
+            R$ 2,49
+          </h3>
+        </div>
         <div
           class="c8"
         >
-          <button
-            aria-label="diminuir"
+          <div
+            class="c9"
           >
-            -
-          </button>
-          <input
-            type="number"
-            value="1"
-          />
-          <button
-            aria-label="aumentar"
-          >
-            +
-          </button>
+            <button
+              aria-label="diminuir"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              value="1"
+            />
+            <button
+              aria-label="aumentar"
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div
-    class="c9"
+    class="c10"
   >
-    Total
+    <h1
+      class="c11"
+    >
+      Total
+    </h1>
     <span
-      class="c10"
+      class="c12"
     >
       R$ 330,00
     </span>

@@ -34,7 +34,7 @@ const Favoritos = ({ menu, products }: FavoritosTemplateProps) => (
         </S.Title>
         <S.Container>
           {products?.map((product, index) => (
-            <Products key={index} {...product} />
+            <Products size="medium" key={index} {...product} />
           ))}
         </S.Container>
       </Container>

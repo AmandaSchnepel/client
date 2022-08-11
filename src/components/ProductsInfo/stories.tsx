@@ -12,7 +12,7 @@ export default {
 } as Meta
 
 export const Default: Story<ProductsInfoProps> = (args) => (
-  <div style={{ maxWidth: '41rem' }}>
+  <div>
     <ProductsInfo {...args} />
   </div>
 )

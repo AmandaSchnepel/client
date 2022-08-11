@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   text-decoration: none;
 
   ${media.greaterThan('large')`
-border-bottom: 0.2rem solid #D6D6D6;
+border-bottom: 0.12rem solid #D6D6D6;
 opacity: 70%;
     `}
   ${media.lessThan('large')`

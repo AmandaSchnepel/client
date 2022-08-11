@@ -10,7 +10,7 @@ describe('<CartList />', () => {
       <CartList items={mockItems} total="R$ 330,00" />
     )
 
-    expect(screen.getAllByRole('heading')).toHaveLength(4)
+    expect(screen.getAllByRole('heading')).toHaveLength(5)
     expect(screen.getByText('R$ 330,00')).toHaveStyle({ color: '#212529' })
 
     expect(container.firstChild).toMatchSnapshot()

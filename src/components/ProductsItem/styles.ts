@@ -3,6 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    width: 100%;
     padding: ${theme.spacings.small};
     border-bottom: 0.1rem solid ${theme.colors.grayLine};
 
@@ -55,7 +56,7 @@ export const Title = styled.h3`
     display: -webkit-box;
     -webkit-line-clamp: 4;
 
-    ${media.lessThan('medium')`
+    ${media.lessThan('medium')` 
       width: 13.9rem;
       font-size: 1.2rem;
       line-height: 1.6rem;
@@ -64,6 +65,9 @@ export const Title = styled.h3`
 
     ${media.lessThan('small')`
     max-width: 26rem;
+    @media(max-width: 280px){
+      width: 10rem;
+        }
   `}
   `}
 `

@@ -4,12 +4,16 @@ import media from 'styled-media-query'
 export const Wrapper = styled.main``
 
 export const Container = styled.div`
-  display: flex;
-  width: 35rem;
+  ${({ theme }) => css`
+    display: flex;
+    width: 35rem;
+    padding: 2rem 2.5rem 0 2.5rem;
 
-  ${media.lessThan('medium')`
+    ${media.lessThan('medium')`
+padding: ${theme.spacings.xsmall} 0.5rem;
 width: 31rem;
-    `}
+`}
+  `}
 `
 export const Content = styled.div`
   display: flex;

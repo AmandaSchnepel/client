@@ -76,11 +76,13 @@ const wrapperModifiers = {
 
 export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, error, disabled }) => css`
+    width: 35rem;
     padding: ${theme.spacings.xsmall};
     border-bottom: 0.1rem solid ${theme.colors.grayLine};
 
     ${media.lessThan('medium')`
     padding: ${theme.spacings.xsmall} 0.5rem;
+    width: 31rem;
     `}
 
     ${error && wrapperModifiers.error(theme)}

@@ -13,7 +13,7 @@ export default {
 } as Meta
 
 export const Default: Story<CartListProps> = (args) => (
-  <div style={{ maxWidth: 800 }}>
+  <div>
     <CartList {...args} />
   </div>
 )

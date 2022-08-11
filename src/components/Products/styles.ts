@@ -5,32 +5,22 @@ import { ProductsProps } from '.'
 const wrapperModifires = {
   regular: () => css`
     ${media.lessThan('small')`
-   height: 18.3rem;
-    width: 12.2rem;
+    max-width: 12.2rem;
+    height: 17.3rem;
+    ${ImageBox}{
+    height: 9rem;
+    }
+    ${Title}{
+      height: 3rem;
+      line-height: 1.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+    }
+ }
 
-  ${FavButton} {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-
-    > svg{
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    } 
-  }
-  ${ImageBox}{
-    height: 8rem;
-  }
-  ${Title}{
-    height: 3rem;
-    line-height: 1.4rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-  }
 `}
 
     ${media.greaterThan('medium')`
@@ -83,11 +73,11 @@ const wrapperModifires = {
  }
 }
 
-
 `}
   `,
 
   medium: () => css`
+    margin: 0 1rem 3rem 1rem;
     height: 22.6rem; 
     width: 15.1rem;
     ${Title} {
@@ -169,11 +159,59 @@ const wrapperModifires = {
         }
       }
     }
-     @media(max-width: 280px){
-        height: 19rem; 
-        width: 10rem;
-          }
-         }
+    ${media.greaterThan('medium')`
+    height: 25.5rem;
+    width: 20.7rem;
+    ${ImageBox}{
+      height: 14.5rem;
+    }
+  ${FavButton} {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    > svg{
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    }
+  }
+  ${Title}{
+    height: 3.4rem;
+    line-height: 1.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+  }
+   @media(max-width: 1280px){
+    height: 26rem;
+    width: 20.4rem;
+ }
+}
+  @media(max-width: 1024px){
+    height: 25rem;
+    width: 19.6rem;
+ }
+}
+  @media(max-width: 912px){
+    height: 24rem;
+    width: 16.8rem;
+ }
+}
+  @media(max-width: 820px){
+    height: 25.5rem;
+    width: 20rem;
+ }
+}
+ @media(max-width: 768px){
+    height: 23rem;
+    width: 16.4rem;
+ }
+}
+
+`}   
 `
 }
 
@@ -181,7 +219,6 @@ export const Wrapper = styled.div<Pick<ProductsProps, 'size'>>`
   ${({ theme, size }) => css`
     position: relative;
     display: flex;
-    margin: 0 1rem 3rem 1rem;
     flex-direction: column;
     width: 100%;
     height: 100%;

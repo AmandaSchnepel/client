@@ -37,10 +37,17 @@ const settings: SliderSettings = {
       }
     },
     {
+      breakpoint: 912,
+      settings: {
+        arrows: false,
+        slidesToShow: 8.6
+      }
+    },
+    {
       breakpoint: 820,
       settings: {
         arrows: false,
-        slidesToShow: 8.5
+        slidesToShow: 7.6
       }
     },
     {
@@ -55,6 +62,13 @@ const settings: SliderSettings = {
       settings: {
         arrows: false,
         slidesToShow: 6.7
+      }
+    },
+    {
+      breakpoint: 540,
+      settings: {
+        arrows: false,
+        slidesToShow: 6.8
       }
     },
     {

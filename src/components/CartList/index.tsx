@@ -8,12 +8,15 @@ export type CartListProps = {
 
 const CartList = ({ items, total }: CartListProps) => (
   <S.Wrapper>
-    {items.map((item) => (
-      <ProductsItem key={item.title} {...item} />
-    ))}
+    <S.ProductList>
+      {items.map((item) => (
+        <ProductsItem key={item.title} {...item} />
+      ))}
+    </S.ProductList>
 
     <S.Footer>
-      Total<S.Total>{total}</S.Total>
+      <S.Title>Total</S.Title>
+      <S.Total>{total}</S.Total>
     </S.Footer>
   </S.Wrapper>
 )
