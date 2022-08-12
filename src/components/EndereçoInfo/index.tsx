@@ -4,7 +4,7 @@ import * as S from './styles'
 export type EndereçoInfoProps = {
   title: string
   subtitle: string
-  tempo: string
+  tempo?: string
 }
 
 const EndereçoInfo = ({ title, subtitle, tempo }: EndereçoInfoProps) => (

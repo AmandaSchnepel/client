@@ -11,7 +11,7 @@ describe('<ProfileMenu />', () => {
       screen.getByRole('link', { name: /Meu perfil/i })
     ).toBeInTheDocument()
 
-    expect(screen.getByRole('link', { name: /Endereços/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Enderecos/i })).toBeInTheDocument()
     expect(
       screen.getByRole('link', { name: /Meios de pagamento/i })
     ).toBeInTheDocument()
@@ -27,9 +27,9 @@ describe('<ProfileMenu />', () => {
     expect(container.firstChild).toMatchSnapshot()
   })
   it('should render the menu with an active link defined', () => {
-    renderWithTheme(<ProfileMenu activeLink="/profile/endereços" />)
+    renderWithTheme(<ProfileMenu activeLink="/perfil/enderecos" />)
 
-    expect(screen.getByRole('link', { name: /Endereços/i })).toHaveStyle({
+    expect(screen.getByRole('link', { name: /Enderecos/i })).toHaveStyle({
       background: theme.colors.green,
       color: theme.colors.white1
     })

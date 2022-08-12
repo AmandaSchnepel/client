@@ -17,33 +17,34 @@ import * as S from './styles'
 
 export type ProfileMenuProps = {
   activeLink?:
-    | '/profile/me'
-    | '/profile/endereços'
-    | '/profile/pagamentos'
-    | '/profile/pedidos'
-    | '/profile/senha'
-    | '/profile/lojas'
+    | '/perfil/me'
+    | '/perfil/enderecos'
+    | '/perfil/pagamentos'
+    | '/perfil/pedidos'
+    | '/perfil/senha'
+    | '/perfil/lojas'
+    | string
 }
 
 const ProfileMenu = ({ activeLink }: ProfileMenuProps) => (
   <S.Nav>
-    <Link href="/profile/me" passHref>
-      <S.Link isActive={activeLink === '/profile/me'} title="Meu perfil">
+    <Link href="/perfil/me" passHref>
+      <S.Link isActive={activeLink === '/perfil/me'} title="Meu perfil">
         <AccountCircle size={24} />
         <span>Meu perfil</span>
       </S.Link>
     </Link>
 
-    <Link href="/profile/endereços" passHref>
-      <S.Link isActive={activeLink === '/profile/endereços'} title="Endereços">
+    <Link href="/perfil/enderecos" passHref>
+      <S.Link isActive={activeLink === '/perfil/enderecos'} title="Enderecos">
         <AddressIcon size={24} />
         <span>Endereços</span>
       </S.Link>
     </Link>
 
-    <Link href="/profile/pagamentos" passHref>
+    <Link href="/perfil/pagamentos" passHref>
       <S.Link
-        isActive={activeLink === '/profile/pagamentos'}
+        isActive={activeLink === '/perfil/pagamentos'}
         title="Meios de pagamentos"
       >
         <PaymentIcon size={24} />
@@ -51,22 +52,22 @@ const ProfileMenu = ({ activeLink }: ProfileMenuProps) => (
       </S.Link>
     </Link>
 
-    <Link href="/profile/pedidos" passHref>
-      <S.Link isActive={activeLink === '/profile/pedidos'} title="Pedidos">
+    <Link href="/perfil/pedidos" passHref>
+      <S.Link isActive={activeLink === '/perfil/pedidos'} title="Pedidos">
         <RequestIcon size={24} />
         <span>Pedidos</span>
       </S.Link>
     </Link>
 
-    <Link href="/profile/senha" passHref>
-      <S.Link isActive={activeLink === '/profile/senha'} title="Alterar Senha">
+    <Link href="/perfil/senha" passHref>
+      <S.Link isActive={activeLink === '/perfil/senha'} title="Alterar Senha">
         <PasswordIcon size={24} />
         <span>Alterar Senha</span>
       </S.Link>
     </Link>
 
-    <Link href="/profile/lojas" passHref>
-      <S.Link isActive={activeLink === '/profile/lojas'} title="Nossas Lojas">
+    <Link href="/perfil/lojas" passHref>
+      <S.Link isActive={activeLink === '/perfil/lojas'} title="Nossas Lojas">
         <StoreIcon size={24} />
         <span>Nossas Lojas</span>
       </S.Link>

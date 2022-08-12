@@ -8,6 +8,7 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
 }
 
 .c0 {
+  box-shadow: inset 0 0 0,0 0 0.08em gray;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -50,7 +51,7 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
 >
   <a
     class="c1"
-    href="/profile/me"
+    href="/perfil/me"
     title="Meu perfil"
   >
     <svg
@@ -77,8 +78,8 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
   </a>
   <a
     class="c1"
-    href="/profile/endere%C3%A7os"
-    title="Endereços"
+    href="/perfil/enderecos"
+    title="Enderecos"
   >
     <svg
       aria-hidden="true"
@@ -101,7 +102,7 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
   </a>
   <a
     class="c1"
-    href="/profile/pagamentos"
+    href="/perfil/pagamentos"
     title="Meios de pagamentos"
   >
     <svg
@@ -129,7 +130,7 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
   </a>
   <a
     class="c1"
-    href="/profile/pedidos"
+    href="/perfil/pedidos"
     title="Pedidos"
   >
     <svg
@@ -155,7 +156,7 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
   </a>
   <a
     class="c1"
-    href="/profile/senha"
+    href="/perfil/senha"
     title="Alterar Senha"
   >
     <svg
@@ -182,7 +183,7 @@ exports[`<ProfileMenu /> should render the heading 1`] = `
   </a>
   <a
     class="c1"
-    href="/profile/lojas"
+    href="/perfil/lojas"
     title="Nossas Lojas"
   >
     <svg

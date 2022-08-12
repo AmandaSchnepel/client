@@ -2,6 +2,7 @@ import styled, { css, DefaultTheme } from 'styled-components'
 
 export const Nav = styled.nav`
   ${({ theme }) => css`
+    box-shadow: inset 0 0 0, 0 0 0.08em gray;
     flex-direction: column;
     border: 0;
     a:not(:last-child) {
