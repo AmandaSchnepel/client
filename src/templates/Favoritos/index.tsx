@@ -7,6 +7,7 @@ import Heading from 'components/Heading'
 import Footer from 'components/Footer'
 import Menu from 'components/Menu'
 import Line from 'components/Line'
+import Empty from 'components/Empty'
 
 import * as S from './styles'
 import MenuMobile from 'components/MenuMobile'
@@ -16,7 +17,7 @@ export type FavoritosTemplateProps = {
   products?: ProductsProps[]
 }
 
-const Favoritos = ({ menu, products }: FavoritosTemplateProps) => (
+const Favoritos = ({ menu, products = [] }: FavoritosTemplateProps) => (
   <S.Wrapper>
     <MediaMatch greaterThan="medium">
       <Container>
@@ -32,11 +33,19 @@ const Favoritos = ({ menu, products }: FavoritosTemplateProps) => (
         <S.Title>
           <Heading color="black2"> Favoritos </Heading>
         </S.Title>
-        <S.Container>
-          {products?.map((product, index) => (
-            <Products size="medium" key={index} {...product} />
-          ))}
-        </S.Container>
+        {products?.length >= 1 ? (
+          <S.Container>
+            {products?.map((product, index) => (
+              <Products size="medium" key={index} {...product} />
+            ))}
+          </S.Container>
+        ) : (
+          <Empty
+            title="Seu favoritos está vazio"
+            description="Adicione produtos nos seus favoritos"
+            hasLink
+          />
+        )}
       </Container>
     </MediaMatch>
 
@@ -49,11 +58,19 @@ const Favoritos = ({ menu, products }: FavoritosTemplateProps) => (
 
           <S.Linha aria-label="linha"></S.Linha>
 
-          <S.Container2>
-            {products?.map((product, index) => (
-              <Products size="medium" key={index} {...product} />
-            ))}
-          </S.Container2>
+          {products?.length >= 1 ? (
+            <S.Container2>
+              {products?.map((product, index) => (
+                <Products size="medium" key={index} {...product} />
+              ))}
+            </S.Container2>
+          ) : (
+            <Empty
+              title="Seu favoritos está vazio"
+              description="Adicione produtos nos seus favoritos"
+              hasLink
+            />
+          )}
         </Container>
 
         <MenuMobile />

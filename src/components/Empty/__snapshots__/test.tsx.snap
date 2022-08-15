@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Empty /> should render correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.c1 {
+  max-width: 35%;
+}
+
+.c2 {
+  color: #212529;
+  font-size: 2.4rem;
+}
+
+.c3 {
+  color: #31322D;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 3.2rem;
+}
+
+.c4 {
+  background: #207824;
+  color: #FFFFFF;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  padding: 0.55rem;
+  height: 4rem;
+  width: 28rem;
+  font-size: 1.6rem;
+}
+
+@media (max-width:450px) {
+  .c1 {
+    max-width: 80%;
+  }
+}
+
+<body>
+  <div>
+    <main
+      class="c0"
+    >
+      <img
+        alt="Carrinho vazio"
+        class="c1"
+        role="image"
+        src="/img/carrinhovazio.png"
+      />
+      <h2
+        class="c2"
+      >
+        Seu carrinho está vazio
+      </h2>
+      <p
+        class="c3"
+      >
+        Uma simples descrição
+      </p>
+      <button
+        class="c4"
+      >
+        <span>
+          Voltar para a loja
+        </span>
+      </button>
+    </main>
+  </div>
+</body>
+`
