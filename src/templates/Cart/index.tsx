@@ -17,6 +17,7 @@ import CartPayments from 'components/CartPayments'
 import CupomDesconto from 'components/CupomDesconto'
 import Payment from 'components/Payment'
 import Button from 'components/Button'
+import Empty from 'components/Empty'
 
 export type CartProps = {
   menu: UserProps[]
@@ -46,38 +47,54 @@ const Cart = ({ menu, list, endereço, payment, items }: CartProps) => (
     </MediaMatch>
 
     <MediaMatch greaterThan="medium">
-      <Container>
-        <S.Container>
-          <S.Container2>
-            <CartList items={list} total="25,99" />
-          </S.Container2>
-          <S.Content>
-            <CartEndereço items={endereço} />
-            <CartPayments items={payment} />
-            <CupomDesconto placeholder="Adicione um cupom" />
-            <S.Container1>
-              {items.map((item, index) => (
-                <Payment key={index} {...item} />
-              ))}
-            </S.Container1>
-          </S.Content>
-        </S.Container>
-      </Container>
+      {items.length ? (
+        <Container>
+          <S.Container>
+            <S.Container2>
+              <CartList items={list} total="25,99" />
+            </S.Container2>
+            <S.Content>
+              <CartEndereço items={endereço} />
+              <CartPayments items={payment} />
+              <CupomDesconto placeholder="Adicione um cupom" />
+              <S.Container1>
+                {items.map((item, index) => (
+                  <Payment key={index} {...item} />
+                ))}
+              </S.Container1>
+            </S.Content>
+          </S.Container>
+        </Container>
+      ) : (
+        <Empty
+          title="Seu carrinho está vazio"
+          description="Volte para a loja e explore nossos produtos"
+          hasLink
+        />
+      )}
     </MediaMatch>
 
     <MediaMatch lessThan="small">
-      <Container>
-        <S.Title2>
-          <Heading>Carrinho</Heading>
-        </S.Title2>
+      {items.length ? (
+        <Container>
+          <S.Title2>
+            <Heading>Carrinho</Heading>
+          </S.Title2>
 
-        <S.Linha aria-label="linha"></S.Linha>
+          <S.Linha aria-label="linha"></S.Linha>
 
-        <CartList items={list} total="25,99" />
-        <S.Div>
-          <Button size="medium">Continuar</Button>
-        </S.Div>
-      </Container>
+          <CartList items={list} total="25,99" />
+          <S.Div>
+            <Button size="medium">Continuar</Button>
+          </S.Div>
+        </Container>
+      ) : (
+        <Empty
+          title="Seu carrinho está vazio"
+          description="Volte para a loja e explore nossos produtos"
+          hasLink
+        />
+      )}
     </MediaMatch>
 
     <MediaMatch greaterThan="medium">

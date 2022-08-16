@@ -133,7 +133,7 @@ const wrapperModifires = {
     width: 2rem;
     height: 2rem;
   } 
-}
+} 
   ${ImageBox}{
   height: 8rem;
 }

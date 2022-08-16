@@ -45,6 +45,13 @@ jest.mock('components/Payment', () => ({
   }
 }))
 
+jest.mock('components/Empty', () => ({
+  __esModule: true,
+  default: function Mock() {
+    return <div data-testid="Mock Empty" />
+  }
+}))
+
 describe('<Cart />', () => {
   it('should render the heading', () => {
     renderWithTheme(<Cart {...props} />)
@@ -53,5 +60,9 @@ describe('<Cart />', () => {
     expect(screen.getByTestId('Mock Menu')).toBeInTheDocument()
     expect(screen.getByTestId('Mock Payments')).toBeInTheDocument()
     expect(screen.getByTestId('Mock Payment')).toBeInTheDocument()
+  })
+
+  it('should render empty section if there are no items', () => {
+    renderWithTheme(<Cart {...props} items={[]} />)
   })
 })
