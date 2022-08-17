@@ -18,9 +18,8 @@ const wrapperModifires = {
   -webkit-box-orient: vertical;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-    }
+  }
 `}
-
     ${media.greaterThan('medium')`
   height: 25.5rem; 
   width: 20.7rem;
@@ -30,12 +29,12 @@ const wrapperModifires = {
   flex-grow: 1;
   justify-content: flex-end;
 
-    > svg{
-    cursor: pointer;
-    width: 2.4rem;
-    height: 2.4rem;
-    }
+  > svg{
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
   }
+}
   ${Title}{
   height: 3.4rem;
   line-height: 1.7rem; 
@@ -70,84 +69,79 @@ const wrapperModifires = {
   `,
 
   medium: () => css`
-  margin: 0 1rem 3rem 1rem;
-  height: 22.6rem; 
-  width: 15.1rem;
-  ${Title} {
-  font-size: 1.3rem;
-  line-height: 1.4rem;
-}
-  ${Price}{
-  font-size: 1.6rem;
-  }
-}
-  ${ImageBox}{
-  height: 12rem;
-}
-  ${Title}{
-  height: 3.4rem;
-  line-height: 1.6rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-} 
-
-  @media(max-width: 425px){
-  height: 23rem; 
-  width: 17.7rem;
-}
-     
-  @media(max-width: 414px){
-  height: 23rem;
-  width: 17rem;
-}
-
-  @media(max-width: 390px){
-  height: 22.6rem; 
-  width: 16rem;
-}
-  @media(max-width: 393px){
-  height: 22.6rem; 
-  width: 15.9rem;
-}
-        
-  @media(max-width: 375px){
-  height: 22.6rem; 
-  width: 15.1rem;
-}
-  @media(max-width: 360px){
-  height: 22.6rem; 
-  width: 14.5rem;
-}
-  @media(max-width: 320px){
-  height: 18.3rem;
-  width: 12.2rem;
-  ${FavButton} {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-    > svg{
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-  } 
-}
-  ${ImageBox}{
-  height: 8rem;
-}
-  ${Title}{
-  height: 3rem;
-  line-height: 1.4rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  }
-}
-  ${media.greaterThan('medium')`
+    margin: 0 1rem 3rem 1rem;
+    height: 22.6rem;
+    width: 15.1rem;
+    ${Title} {
+      font-size: 1.3rem;
+      line-height: 1.4rem;
+    }
+    ${Price} {
+      font-size: 1.6rem;
+    }
+    ${ImageBox} {
+      height: 12rem;
+    }
+    ${Title} {
+      height: 3.4rem;
+      line-height: 1.6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+    }
+    @media (max-width: 425px) {
+      height: 23rem;
+      width: 17.7rem;
+    }
+    @media (max-width: 414px) {
+      height: 23rem;
+      width: 17rem;
+    }
+    @media (max-width: 390px) {
+      height: 22.6rem;
+      width: 16rem;
+    }
+    @media (max-width: 393px) {
+      height: 22.6rem;
+      width: 15.9rem;
+    }
+    @media (max-width: 375px) {
+      height: 22.6rem;
+      width: 15.1rem;
+    }
+    @media (max-width: 360px) {
+      height: 22.6rem;
+      width: 14.5rem;
+    }
+    @media (max-width: 320px) {
+      height: 18.3rem;
+      width: 12.2rem;
+      ${FavButton} {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        > svg {
+          cursor: pointer;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+      ${ImageBox} {
+        height: 8rem;
+      }
+      ${Title} {
+        height: 3rem;
+        line-height: 1.4rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+      }
+    }
+    ${media.greaterThan('medium')`
   height: 25.5rem;
   width: 20.7rem;
   ${ImageBox}{
@@ -176,7 +170,6 @@ const wrapperModifires = {
   height: 26rem;
   width: 20.4rem;
 }
-
   @media(max-width: 1024px){
   height: 25rem;
   width: 19.6rem;
