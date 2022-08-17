@@ -10,10 +10,11 @@ export const Wrapper = styled.main`
 `
 
 export const Image = styled.img`
-  max-width: 35%;
+  max-width: 11%;
+  margin-bottom: 2rem;
 
   ${media.lessThan('small')`
-    max-width: 80%;
+    max-width: 30%;
 `}
 `
 
