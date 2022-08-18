@@ -7,15 +7,23 @@ export const Wrapper = styled.main`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 10rem;
 `
+type ImageProps = {
+  src: string
+}
+export const Image = styled.img<ImageProps>`
+  ${({ src }) => css`
+    max-width: 11%;
+    margin-bottom: 2rem;
+    background-image: url(${src});
+    background-position: center center;
+    background-size: cover;
 
-export const Image = styled.img`
-  max-width: 11%;
-  margin-bottom: 2rem;
-
-  ${media.lessThan('small')`
+    ${media.lessThan('small')`
     max-width: 30%;
 `}
+  `}
 `
 
 export const Title = styled.h2`

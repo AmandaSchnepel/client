@@ -5,7 +5,8 @@ import Empty from '.'
 
 const props = {
   title: 'Seu carrinho está vazio',
-  description: 'Uma simples descrição'
+  description: 'Uma simples descrição',
+  image: '/img/carrinhovazio.png'
 }
 
 describe('<Empty />', () => {
@@ -13,7 +14,7 @@ describe('<Empty />', () => {
     const { container } = renderWithTheme(<Empty {...props} hasLink />)
 
     expect(
-      screen.getByRole('image', { name: /carrinho vazio/i })
+      screen.getByRole('img', { name: /carrinho vazio/i })
     ).toBeInTheDocument()
 
     expect(

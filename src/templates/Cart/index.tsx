@@ -4,6 +4,9 @@ import { ProductsItemProps } from 'components/ProductsItem'
 import { EndereçoInfoProps } from 'components/EndereçoInfo'
 import { PaymentOptionsProps } from 'components/PaymentOptions'
 import { PaymentProps } from 'components/Payment'
+import ProductsSlider1Regular from 'components/ProductsSliderRegular'
+
+import Highlight from 'components/Highlight'
 
 import MediaMatch from 'components/MediaMatch'
 import Line from 'components/Line'
@@ -18,6 +21,7 @@ import CupomDesconto from 'components/CupomDesconto'
 import Payment from 'components/Payment'
 import Button from 'components/Button'
 import Empty from 'components/Empty'
+import { ProductsProps } from 'components/Products'
 
 export type CartProps = {
   menu: UserProps[]
@@ -25,9 +29,17 @@ export type CartProps = {
   endereço: EndereçoInfoProps[]
   payment: PaymentOptionsProps[]
   items: PaymentProps[]
+  productsSlider1Regular: ProductsProps[]
 }
 
-const Cart = ({ menu, list, endereço, payment, items }: CartProps) => (
+const Cart = ({
+  menu,
+  list,
+  endereço,
+  payment,
+  items,
+  productsSlider1Regular
+}: CartProps) => (
   <S.Wrapper>
     <MediaMatch greaterThan="medium">
       <Container>
@@ -70,6 +82,7 @@ const Cart = ({ menu, list, endereço, payment, items }: CartProps) => (
           title="Seu carrinho está vazio"
           description="Volte para a loja e explore nossos produtos"
           hasLink
+          image="/img/carrinhovazio.png"
         />
       )}
     </MediaMatch>
@@ -93,13 +106,18 @@ const Cart = ({ menu, list, endereço, payment, items }: CartProps) => (
           title="Seu carrinho está vazio"
           description="Volte para a loja e explore nossos produtos"
           hasLink
+          image="/img/carrinhovazio.png"
         />
       )}
     </MediaMatch>
 
     <MediaMatch greaterThan="medium">
       <Container>
-        <Heading>Compre Também</Heading>
+        <S.div>
+          <Heading>Compre Também</Heading>
+          <ProductsSlider1Regular items={productsSlider1Regular} />
+        </S.div>
+        <Highlight image="/img/BANNERSITE1.jpg" />
       </Container>
     </MediaMatch>
 

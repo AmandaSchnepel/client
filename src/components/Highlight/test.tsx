@@ -4,13 +4,13 @@ import { renderWithTheme } from 'utils/tests/helpers'
 import Highlight from '.'
 
 const props = {
-  backgroundImage: '/img/BANNERSITE1.jpg'
+  image: '/img/BANNERSITE1.jpg'
 }
 
 describe('<Highlight />', () => {
   it('should render background image', () => {
     renderWithTheme(<Highlight {...props} />)
 
-    expect(screen.getByLabelText(/banner/i)).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: /banner/i })).toBeInTheDocument()
   })
 })

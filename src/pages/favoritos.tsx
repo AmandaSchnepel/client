@@ -11,7 +11,8 @@ export function getServerSideProps() {
   return {
     props: {
       menu: MenuMock,
-      products: ProductsMock
+      products: ProductsMock,
+      productsSlider1Regular: ProductsMock
     }
   }
 }
