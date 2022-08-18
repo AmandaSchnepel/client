@@ -6,11 +6,12 @@ export type EmptyProps = {
   title: string
   description: string
   hasLink?: boolean
+  image: string
 }
 
-const Empty = ({ title, description, hasLink }: EmptyProps) => (
+const Empty = ({ title, description, hasLink, image }: EmptyProps) => (
   <S.Wrapper>
-    <S.Image src="/img/carrinhovazio.png" alt="Carrinho vazio" role="image" />
+    <S.Image src={image} aria-Label="carrinho vazio" />
 
     <S.Title>{title}</S.Title>
     <S.Description>{description}</S.Description>

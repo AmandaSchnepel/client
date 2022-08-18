@@ -1,11 +1,13 @@
 import * as S from './styles'
 
 export type HighlightProps = {
-  backgroundImage: string
+  image: string
 }
 
-const Highlight = ({ backgroundImage }: HighlightProps) => (
-  <S.Wrapper backgroundImage={backgroundImage} aria-label="banner"></S.Wrapper>
+const Highlight = ({ image }: HighlightProps) => (
+  <S.Wrapper>
+    <S.Image src={image} aria-label="banner" />
+  </S.Wrapper>
 )
 
 export default Highlight

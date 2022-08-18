@@ -10,5 +10,6 @@ export const Default: Story<EmptyProps> = (args) => <Empty {...args} />
 
 Default.args = {
   title: 'Seu carrinho está vazio',
-  description: 'Adicione produtos em seu carrinho'
+  description: 'Adicione produtos em seu carrinho',
+  image: '/img/carrinhovazio.png'
 }

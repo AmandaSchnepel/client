@@ -60,3 +60,7 @@ export const Div = styled.div`
   align-items: center;
 `
 export const Container3 = styled.div``
+
+export const div = styled.div`
+  margin-top: 4rem;
+`

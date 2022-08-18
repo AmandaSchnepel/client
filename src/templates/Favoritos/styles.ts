@@ -32,3 +32,6 @@ export const Linha = styled.div`
   border-bottom: 0.2rem solid #d6d6d6;
   opacity: 100%;
 `
+export const div = styled.div`
+  margin-top: 6rem;
+`

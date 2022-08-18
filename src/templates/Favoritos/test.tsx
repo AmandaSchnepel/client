@@ -1,3 +1,4 @@
+import 'match-media-mock'
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
@@ -7,7 +8,8 @@ import Favoritos from '.'
 
 const props = {
   menu: MenuMock,
-  products: ProductsMock
+  products: ProductsMock,
+  productsSlider1Regular: ProductsMock
 }
 
 describe('<Favoritos />', () => {

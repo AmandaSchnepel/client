@@ -3,6 +3,8 @@ import listMock from 'components/CartList/mock'
 import EndereçoMock from 'components/CartEndereço/mock'
 import paymentMock from 'components/CartPayments/mock'
 import paymentOptionMock from 'components/Payment/mock'
+import ProductsMock from 'components/ProductsSliderRegular/mock'
+import 'match-media-mock'
 
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
@@ -14,7 +16,8 @@ const props: CartProps = {
   list: listMock,
   endereço: EndereçoMock,
   payment: paymentMock,
-  items: paymentOptionMock
+  items: paymentOptionMock,
+  productsSlider1Regular: ProductsMock
 }
 
 jest.mock('components/Menu', () => ({

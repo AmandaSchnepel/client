@@ -5,7 +5,7 @@ export default {
   title: 'Highlight',
   component: Highlight,
   args: {
-    backgroundImage: '/img/BANNERSITE1.jpg'
+    image: '/img/BANNERSITE1.png'
   }
 } as Meta
 
