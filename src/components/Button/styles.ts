@@ -60,6 +60,10 @@ const wrapperModifires = {
   width: 12rem;
   height: 3.4rem;
 `}
+  `,
+  fullWidth: () => css`
+    width: 100%;
+    height: 4rem;
   `
 }
 

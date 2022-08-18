@@ -15,6 +15,7 @@ export type ButtonProps = {
     | 'large'
     | 'xlarge'
     | 'ButtonBanner'
+    | 'fullWidth'
   as?: React.ElementType
 } & ButtonTypes
 
