@@ -19,6 +19,8 @@ export const Footer = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-grow: 1;
+    align-items: center;
+    padding: 1rem;
     background: ${tint(0.2, theme.colors.white2)};
 
     ${media.lessThan('medium')`

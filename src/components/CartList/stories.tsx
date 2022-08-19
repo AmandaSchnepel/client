@@ -17,3 +17,9 @@ export const Default: Story<CartListProps> = (args) => (
     <CartList {...args} />
   </div>
 )
+
+export const WithButton: Story<CartListProps> = (args) => (
+  <div>
+    <CartList {...args} hasButton />
+  </div>
+)
