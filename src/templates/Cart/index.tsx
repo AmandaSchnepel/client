@@ -59,7 +59,7 @@ const Cart = ({
     </MediaMatch>
 
     <MediaMatch greaterThan="medium">
-      {items.length ? (
+      {items?.length ? (
         <Container>
           <S.Container>
             <S.Container2>
@@ -88,7 +88,7 @@ const Cart = ({
     </MediaMatch>
 
     <MediaMatch lessThan="small">
-      {items.length ? (
+      {items?.length ? (
         <Container>
           <S.Title2>
             <Heading>Carrinho</Heading>
