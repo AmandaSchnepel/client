@@ -1,35 +1,21 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils/tests/helpers'
 
-import ImageMock from 'components/ImagesSlider/mock'
+import ProductsMock from 'components/ProductsSliderRegular/mock'
 import MenuMock from 'components/Menu/mock'
-import InfoMock from 'components/ProductsInfo/mock'
-import Produtos, { ProdutosProps } from '.'
+import filterItemsMock from 'components/ExploreSidebar/mock'
+import Produtos from '.'
 
-const props: ProdutosProps = {
+const props = {
   menu: MenuMock,
-  image: ImageMock,
-  items: InfoMock
+  products: ProductsMock,
+  filterItems: filterItemsMock
 }
-
-jest.mock('components/ImagesSlider', () => ({
-  __esModule: true,
-  default: function Mock() {
-    return <div data-testid="Mock Images" />
-  }
-}))
-jest.mock('components/ProductsInfo', () => ({
-  __esModule: true,
-  default: function Mock() {
-    return <div data-testid="Mock ProductsInfo" />
-  }
-}))
 
 describe('<Produtos />', () => {
   it('should render the heading', () => {
     renderWithTheme(<Produtos {...props} />)
 
-    expect(screen.getByTestId('Mock Images')).toBeInTheDocument()
-    expect(screen.getByTestId('Mock ProductsInfo')).toBeInTheDocument()
+    expect(screen.getByLabelText(/Open menu/i)).toBeInTheDocument()
   })
 })

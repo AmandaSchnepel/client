@@ -1,5 +1,24 @@
 export default [
   {
+    title: 'Ordenar por',
+    name: 'Ordenar por',
+    type: 'checkbox',
+    fields: [
+      {
+        label: 'Menor preço',
+        name: 'menor preço'
+      },
+      {
+        label: 'Maior preço',
+        name: 'maior preço'
+      },
+      {
+        label: 'Mais vendidos',
+        name: 'mais vendidos'
+      }
+    ]
+  },
+  {
     title: 'Categorias',
     name: 'Categorias',
     type: 'checkbox',
@@ -51,25 +70,6 @@ export default [
       {
         label: 'Pet-shop',
         name: 'pet shop'
-      }
-    ]
-  },
-  {
-    title: 'Ordenar por',
-    name: 'Ordenar por',
-    type: 'checkbox',
-    fields: [
-      {
-        label: 'Menor preço',
-        name: 'menor preço'
-      },
-      {
-        label: 'Maior preço',
-        name: 'maior preço'
-      },
-      {
-        label: 'Mais vendidos',
-        name: 'mais vendidos'
       }
     ]
   }

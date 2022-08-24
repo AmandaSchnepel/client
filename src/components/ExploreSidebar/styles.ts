@@ -52,9 +52,7 @@ export const Items = styled.div`
 `
 
 export const Footer = styled.div`
-  ${({ theme }) => css`
-    padding: ${theme.spacings.small};
-  `}
+  margin-top: 2.5rem;
 `
 
 const wrapperModifiers = {
@@ -135,6 +133,9 @@ export const Wrapper = styled.div<WrapperProps>`
     ${media.lessThan('medium')`
       ${!!isOpen && wrapperModifiers.open(theme)}
       ${!isOpen && wrapperModifiers.close(theme)}
+    `}
+    ${media.greaterThan('medium')`
+    margin: 3rem 0 0 0;
     `}
   `}
 `

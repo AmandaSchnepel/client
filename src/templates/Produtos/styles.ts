@@ -1,26 +1,36 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+import { Container } from 'components/Container'
 
 export const Wrapper = styled.div``
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10rem 5rem 0 5rem;
-
-  ${media.lessThan('large')`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5rem 5rem 0 5rem;
-
+export const Main = styled(Container)`
+  ${({ theme }) => css`
+    ${media.greaterThan('medium')`
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    gap: ${theme.grid.gutter};
+    `}
   `}
 `
-export const div = styled.div`
-  margin: 0 20rem 0 0;
-  ${media.lessThan('large')`
-margin: 0 0 2rem 0;
-
-`}
+export const Center = styled.div`
+  display: flex;
+  justify-content: center;
+`
+export const Container2 = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+export const ShowMore = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.green};
+    text-align: center;
+    padding: ${theme.spacings.medium};
+    text-transform: uppercase;
+    font-weight: medium;
+    cursor: pointer;
+    > svg {
+      color: ${theme.colors.green};
+    }
+  `}
 `

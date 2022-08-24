@@ -1,10 +1,10 @@
-import Produtos, { ProdutosProps } from 'templates/Produtos'
+import Produto, { ProdutosProps } from 'templates/Produto'
 
 import ImageMock from 'components/ImagesSlider/mock'
 import InfoMock from 'components/ProductsInfo/mock'
 
 export default function Index(props: ProdutosProps) {
-  return <Produtos {...props} />
+  return <Produto {...props} />
 }
 
 export async function getStaticPaths() {

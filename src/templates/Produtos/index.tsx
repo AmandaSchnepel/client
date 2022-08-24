@@ -1,45 +1,86 @@
-import { UserProps } from 'components/MenuUserInfo'
-import { ImagesProps } from 'components/Images'
-import { ProductsInfoProps } from 'components/ProductsInfo'
-import { Container } from 'components/Container'
-
 import MediaMatch from 'components/MediaMatch'
-import Line from 'components/Line'
 import Footer from 'components/Footer'
 import Menu from 'components/Menu'
-import ImagesSlider from 'components/ImagesSlider'
-import ProductsInfo from 'components/ProductsInfo'
+import Line from 'components/Line'
+import Empty from 'components/Empty'
+import { Grid } from 'components/Grid'
+import Products, { ProductsProps } from 'components/Products'
+import ExploreSidebar, { ItemProps } from 'components/ExploreSidebar'
+import { KeyboardArrowDown as ArrowDown } from '@styled-icons/material-outlined/KeyboardArrowDown'
+import { Container } from 'components/Container'
+import { UserProps } from 'components/MenuUserInfo'
 import * as S from './styles'
 
-export type ProdutosProps = {
+export type ProdutosTemplateProps = {
   menu: UserProps[]
-  image: ImagesProps[]
-  items: ProductsInfoProps[]
+  products?: ProductsProps[]
+  filterItems: ItemProps[]
 }
 
-const Produtos = ({ image, items, menu }: ProdutosProps) => (
-  <S.Wrapper>
-    <Container>
-      <Menu items={menu} />
-    </Container>
+const ProdutosTemplate = ({
+  menu,
+  filterItems,
+  products = []
+}: ProdutosTemplateProps) => {
+  const handleShowMore = () => {
+    return
+  }
+  return (
+    <S.Wrapper>
+      <MediaMatch greaterThan="medium">
+        <Container>
+          <Menu items={menu} />
+        </Container>
+        <Container>
+          <Line />
+        </Container>
+      </MediaMatch>
 
-    <Container>
-      <Line />
-    </Container>
+      <S.Main>
+        <ExploreSidebar
+          items={filterItems}
+          onFilter={() => console.log('filter')}
+        />
 
-    <S.Container>
-      <S.div>
-        <ImagesSlider items={image} aria-label="gallery" />
-      </S.div>
-      {items.map((item, index) => (
-        <ProductsInfo key={index} {...item} />
-      ))}
-    </S.Container>
+        <MediaMatch greaterThan="large">
+          <Grid>
+            {products?.map((product, index) => (
+              <Products size="medium" key={index} {...product} />
+            ))}
+          </Grid>
 
-    <MediaMatch greaterThan="large">
-      <Footer />
-    </MediaMatch>
-  </S.Wrapper>
-)
+          <S.ShowMore role="button" onClick={handleShowMore}>
+            <p>Ver mais</p>
+            <ArrowDown size={35} />
+          </S.ShowMore>
+        </MediaMatch>
+      </S.Main>
 
-export default Produtos
+      <S.Center>
+        <MediaMatch lessThan="small">
+          <Container>
+            {products?.length >= 1 ? (
+              <S.Container2>
+                {products?.map((product, index) => (
+                  <Products size="medium" key={index} {...product} />
+                ))}
+              </S.Container2>
+            ) : (
+              <Empty
+                title="Produto não encontrado"
+                description="Não foi possível encontrar este item"
+                hasLink
+                image="/img/carrinhovazio.png"
+              />
+            )}
+          </Container>
+        </MediaMatch>
+      </S.Center>
+
+      <MediaMatch greaterThan="large">
+        <Footer />
+      </MediaMatch>
+    </S.Wrapper>
+  )
+}
+export default ProdutosTemplate
