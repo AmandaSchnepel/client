@@ -2,12 +2,31 @@ import { tint } from 'polished'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const Wrapper = styled.main`
-  ${({ theme }) => css`
+import * as EmptyStyles from 'components/Empty/styles'
+
+type WrapperProps = {
+  isEmpty: boolean
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ theme, isEmpty }) => css`
     width: 100%;
     background: ${theme.colors.white1};
     display: flex;
     flex-direction: column;
+
+    ${isEmpty &&
+    css`
+      ${EmptyStyles.Wrapper} {
+        padding-bottom: ${theme.spacings.medium};
+      }
+
+    ${EmptyStyles.Image} {
+      max-width: 12rem;
+    }
+    }
+
+    `}
   `}
 `
 export const ProductList = styled.div`
@@ -19,6 +38,8 @@ export const Footer = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-grow: 1;
+    align-items: center;
+    padding: 1rem;
     background: ${tint(0.2, theme.colors.white2)};
 
     ${media.lessThan('medium')`
